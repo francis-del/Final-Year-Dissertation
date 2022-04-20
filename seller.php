@@ -259,10 +259,10 @@ include("footer.php");
 			document.frmsellreg.city.focus();
 			return false;
 		  }
-		   else if(document.frmsellreg.pincode.value == "")
+		   else if(document.frmsellreg.postcode.value == "")
 		  {
-			alert("Kindly enter the pincode..");
-			document.frmsellreg.pincode.focus();
+			alert("Kindly enter the postcode..");
+			document.frmsellreg.postcode.focus();
 			return false;
 		  }
 		  else if(document.frmsellreg.contactnumber.value == "")

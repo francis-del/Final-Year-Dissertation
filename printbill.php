@@ -57,7 +57,7 @@ $rs3 = mysqli_fetch_array($qsql3);
                 <div class="info">
                   <i class="icofont-envelope"></i>
                   <h4>Delivery address:</h4>
-                  <p><?php echo $rs['customer_address']; ?> <br><?php echo $rs3['city']; ?> <br><?php echo $rs2['state']; ?> <br><?php echo $rs1['country']; ?> <br>PIN <?php echo $rs['pincode']; ?></p>
+                  <p><?php echo $rs['customer_address']; ?> <br><?php echo $rs3['city']; ?> <br><?php echo $rs2['state']; ?> <br><?php echo $rs1['country']; ?> <br>POST <?php echo $rs['postcode']; ?></p>
                 </div>
               </div>
             </div>

@@ -4,7 +4,7 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 function sendmail($tomail, $totmailname , $subject, $message)
 {
-	$loginid 	= "kingochina60@gmail.com";
+	$loginid 	= "adinducon@gmail.com";
 	$password 	= "Q1w2e3r4/";
 	$smtpserver = "smtp.gmail.com";
 	$smtpport 	= 587;
@@ -82,5 +82,5 @@ function sendmail($tomail, $totmailname , $subject, $message)
 			$mail->ErrorInfo}";
 	}
 }
-//sendmail("mvaravinda@gmail.com", "Aravinda" , "My subject title", "My message");
+//sendmail("farmexfms@gmail.com", "farmex" , "My subject title", "My message");
 ?>

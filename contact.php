@@ -2,7 +2,7 @@
 include("header.php");
 if(isset($_POST['submit']))
 {
-	$to = "adinducon@gmail.com";
+	$to = "farmexfms@gmail.com";
 	$subject = "Message from Farmex";		
 	$message = "<html>
 	<head>
@@ -86,7 +86,10 @@ if(isset($_POST['submit']))
         <div class="row">
 
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127482.6881405034!2d101.6169488902334!3d3.138503559663121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49c701efeae7%3A0xf4d98e5b2f1c287d!2sKuala%20Lumpur%2C%20Federal%20Territory%20of%20Kuala%20Lumpur%2C%20Malaysia!5e0!3m2!1sen!2sin!4v1589645210749!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed/v1/place?key= AIzaSyB5WTx8yWM5Rwxsa75iVH2-aBi_t_AEt6w
+  &q=coventry+university,England+United Kingdom" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             <div class="info mt-4">
               <i class="icofont-google-map"></i>
               <h4>Location:</h4>

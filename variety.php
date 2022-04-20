@@ -111,7 +111,7 @@ if(isset($_GET['editid']))
 	</div>	
 	
 	<div class="col-md-12 form-group">
-	Produce <font color="#FF0000">*</font>
+	Produce <font color="#3E5C76">*</font>
 
 			<div id="txtHint">
 			<select name="produce" id="produce" class="form-control">
@@ -136,17 +136,17 @@ if(isset($_GET['editid']))
 	</div>	
 	
 	<div class="col-md-12 form-group">
-	Variety <font color="#FF0000">*</font>
+	Variety <font color="#3E5C76">*</font>
 	  <input type="text" name="variety" id="variety" value="<?php echo $rsedit['variety']; ?>" class="form-control">
 	</div>	
 	
 	<div class="col-md-12 form-group">
-	Description <font color="#FF0000">*</font>
+	Description <font color="#3E5C76">*</font>
 	  <textarea  name="description" id="description" class="form-control" ><?php echo $rsedit['description']; ?></textarea>
 	</div>	
 	
 	<div class="col-md-12 form-group">
-	Image <font color="#FF0000">*</font>
+	Image <font color="#3E5C76">*</font>
 	  <input type="file" name="img" id="img" class="form-control">
 	  <?php
 if(isset($_GET['editid']))
@@ -175,7 +175,7 @@ else
 	</div>	
 	
 	<div class="col-md-12 form-group">
-	Status <font color="#FF0000">*</font>
+	Status <font color="#3E5C76">*</font>
 	  <select name="status" id="status" class="form-control">
 			<option value="">Select Status</option>
 		  <?php
@@ -198,7 +198,7 @@ else
 </div>
 
 <hr>
-<button type="submit" name="submit" id="submit" class="btn btn-info btn-lg btn-block" >Submit</button>
+<button type="submit" name="submit" id="submit" class="btn btn-info btn-lg btn-block" >Submit Now</button>
 
 </form>
             </div>

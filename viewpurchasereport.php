@@ -52,7 +52,7 @@ echo mysqli_error($con);
 		  <th height="35"><strong>Bill No.</strong></th>
 	  <th><strong>Product</strong></th>
 	  <th><strong>Payment Type</strong></th>
-	  <th><strong>Paid Date</strong></th>
+	  <th><strong>Paid Date</strong><input type="date" id="request_date" name="date"</th>
 	  <th><strong>Quantity</strong></th>
 	  <th><strong>Paid Amount</strong></th>
 	  <th><strong>Action</strong></th>

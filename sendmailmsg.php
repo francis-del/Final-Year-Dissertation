@@ -6,18 +6,18 @@ $mail = new PHPMailer;
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'mail.dentaldiary.in';  // Specify main and backup SMTP servers
+$mail->Host = 'farmexfms@gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'sendmail@dentaldiary.in';                 // SMTP username
-$mail->Password = 'q1w2e3r4/';                           // SMTP password
+$mail->Username = 'farmexfms@gmail.com';                 // SMTP username
+$mail->Password = 'Coventry2022';                           // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
 
-$mail->From = 'sendmail@dentaldiary.in';
-$mail->FromName = 'Dental Diary';
-$mail->addAddress('aravinda@technopulse.in', 'Joe User');     // Add a recipient
-$mail->addAddress('aravinda@technopulse.in');               // Name is optional
-$mail->addReplyTo('aravinda@technopulse.in', 'Information');
+$mail->From = 'farmexfms@gmail.com';
+$mail->FromName = 'Randy ';
+$mail->addAddress('farmexfms@gmail.com', 'randy User');     // Add a recipient
+$mail->addAddress('farmexfms@gmail.com');               // Name is optional
+$mail->addReplyTo('farmexfms@gmail.com', 'Information');
 $mail->addCC('cc@example.com');
 $mail->addBCC('bcc@example.com');
 

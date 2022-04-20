@@ -25,7 +25,7 @@ if($_SESSION['randnumber']  == $_POST['randnumber'])
 	{
 		if(isset($_GET['editid']))
 		{
-			$sql ="UPDATE customer SET  `customer_name`='$_POST[customername]', `address`='$_POST[address]', `country_id`='$_POST[country]', `state_id`='$_POST[state]', `city_id`='$_POST[city]', `postcode`='$_POST[postcode]', `contact_no`='$_POST[cntctnum]', `mobile_no`='$_POST[mblnum]', `email_id`='$_POST[email_id]', `password`='$_POST[password]', `customer_type`='$_POST[customertype]', `status`='$_POST[status]' WHERE customer_id='$_GET[editid]'";
+			$sql ="UPDATE customer SET  `customer_name`='$_POST[customername]', `address`='$_POST[address]', `country_id`='$_POST[country]', `state_id`='$_POST[state]', `city_id`='$_POST[city]', `postcode`='$_POST[postcode]', `contact_no`='$_POST[cntctnum]', `email_id`='$_POST[email_id]', `password`='$_POST[password]', `customer_type`='$_POST[customertype]', `status`='$_POST[status]' WHERE customer_id='$_GET[editid]'";
 			if(!mysqli_query($con,$sql))
 			{
 				echo "Error in mysqli query";
@@ -37,7 +37,7 @@ if($_SESSION['randnumber']  == $_POST['randnumber'])
 		}
 		else
 		{
-			$sql="INSERT INTO `customer`( `customer_name`, `address`, `country_id`, `state_id`, `city_id`, `postcode`, `contact_no`, `mobile_no`, `email_id`, `password`, `customer_type`, `status`) VALUES ('$_POST[customername]','$_POST[address]','$_POST[country]','$_POST[state]','$_POST[city]','$_POST[postcode]','$_POST[cntctnum]','$_POST[mblnum]','$_POST[email_id]','$_POST[password]','$_POST[customertype]','$_POST[status]')";	
+			$sql="INSERT INTO `customer`( `customer_name`, `address`, `country_id`, `state_id`, `city_id`, `postcode`, `contact_no`, `email_id`, `password`, `customer_type`, `status`) VALUES ('$_POST[customername]','$_POST[address]','$_POST[country]','$_POST[state]','$_POST[city]','$_POST[postcode]','$_POST[cntctnum]','$_POST[email_id]','$_POST[password]','$_POST[customertype]','$_POST[status]')";	
 			if(!mysqli_query($con,$sql))
 			{
 				echo "Error in mysqli query ".mysqli_error($con);
@@ -163,10 +163,10 @@ if(isset($_GET['editid']))
 	  <input type="number" name="cntctnum" id="cntctnum" value="<?php echo $rsedit['contact_no']; ?>" class="form-control">
 	</div>
 	
-	<div class="col-md-6 form-group">
+	<!-- <div class="col-md-6 form-group">
 	Mobile Number <font color="#4B2E39"> *</font>
 	  <input type="number" name="mblnum" id="mblnum" value="<?php echo $rsedit['mobile_no']; ?>" class="form-control">
-	</div>
+	</div> -->
 		
 	<div class="col-md-6 form-group">
 	Customer Type <font color="#4B2E39"> *</font>
@@ -289,10 +289,10 @@ var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/; //Variable t
 		document.frmcstreg.city.focus();
 		return false;
 	}
-	else if(document.frmcstreg.pincode.value == "")
+	else if(document.frmcstreg.postcode.value == "")
 	{
-		alert("Kindly enter PIN Code..");
-		document.frmcstreg.pincode.focus();
+		alert("Kindly enter Post Code..");
+		document.frmcstreg.postcode.focus();
 		return false;
 	}
 	else if(document.frmcstreg.cntctnum.value == "")
@@ -307,12 +307,12 @@ var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/; //Variable t
 		document.frmcstreg.mblnum.focus();
 		return false;
 	}
-	else if(document.frmcstreg.mblnum.value.length != 10)
-	{
-		alert("Mobile Number must be 10 digits..");
-		document.frmcstreg.mblnum.focus();
-		return false;
-	}
+	// else if(document.frmcstreg.mblnum.value.length != 10)
+	// {
+	// 	alert("Mobile Number must be 10 digits..");
+	// 	document.frmcstreg.mblnum.focus();
+	// 	return false;
+	// }
 	else if(document.frmcstreg.email_id.value == "")
 	{
 		alert("Enter Email ID..");

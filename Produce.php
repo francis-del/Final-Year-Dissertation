@@ -83,7 +83,7 @@ if(isset($_GET['editid']))
 <div class="form-row">
 
 	<div class="col-md-12 form-group">
-	Category <font color="#FF0000">*</font>
+	Category <font color="#735751">*</font>
 	  <select name="category" id="category" autofocus class="form-control">
                                    <option value="">Select</option>
                                   <?php
@@ -105,12 +105,12 @@ if(isset($_GET['editid']))
 	</div>	
 	
 	<div class="col-md-12 form-group">
-	Produce <font color="#FF0000">*</font>
+	Produce <font color="#735751">*</font>
 	  <input type="text" name="produce" id="produce" value="<?php echo $rsedit['produce']; ?>" class="form-control" >
 	</div>	
 	
 	<div class="col-md-12 form-group">
-	Image <font color="#FF0000">*</font>
+	Image <font color="#735751">*</font>
 	  <input type="file" name="img" id="img" class="form-control">
 	  <?php
 if(isset($_GET['editid']))
@@ -140,12 +140,12 @@ else
 	
 	
 	<div class="col-md-12 form-group">
-	Description <font color="#FF0000">*</font>
+	Description <font color="#735751">*</font>
 	  <textarea  name="description" id="description" class="form-control" ><?php echo $rsedit['description']; ?></textarea>
 	</div>	
 	
 	<div class="col-md-12 form-group">
-	Status <font color="#FF0000">*</font>
+	Status <font color="#735751">*</font>
 	  <select name="status" id="status" class="form-control">
 			<option value="">Select Status</option>
 		  <?php

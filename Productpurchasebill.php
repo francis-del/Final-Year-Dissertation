@@ -151,7 +151,7 @@ if(isset($_GET['editid']))
 	
 	
 	<div class="col-md-6 form-group">
-	Pin code <font color="#EFE6DD">*</font>
+	Post code <font color="#EFE6DD">*</font>
 	<input type="number" name="postcode" id="postcode"  value="<?php echo $rsedit['postcode']; ?>" class="form-control">
 	</div>	
 	
@@ -193,7 +193,7 @@ include("footer.php");
 		}
 		else if(!document.frmprodpurchasebill.customername.value.match(alphaspaceExp))
 		{
-			alert("Please enter only letters Customer name..");
+			alert("Enter only letters Customer name..");
 			document.frmprodpurchasebill.customername.focus();
 			return false;
 		}
@@ -224,7 +224,7 @@ include("footer.php");
 		else if(document.frmprodpurchasebill.pincode.value == "")
 		{
 			alert("Enter your Post Code..");
-			document.frmprodpurchasebill.pincode.focus();
+			document.frmprodpurchasebill.postcode.focus();
 			return false;
 		}	
 		else if(document.frmprodpurchasebill.contactnumber.value == "")

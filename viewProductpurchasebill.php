@@ -62,7 +62,7 @@ if(isset($_GET['deleteid']))
 						      <th><strong>Country</strong></th>
 						      <th><strong>State</strong></th>
 						      <th><strong>City</strong></th>
-						      <th><strong>Pincode</strong></th>
+						      <th><strong>Postcode</strong></th>
 						      <th><strong>Contact Number</strong></th>
                                <th><strong>Action</strong></th>
 						      </tr>
@@ -89,7 +89,7 @@ if(isset($_GET['deleteid']))
 						      <td>&nbsp;$rs1[country]</td>
 						      <td>&nbsp;$rs2[state]</td>
 						      <td>&nbsp;$rs3[city]</td>
-						      <td>&nbsp;$rs[pincode]</td>
+						      <td>&nbsp;$rs[postcode]</td>
 						      <td>&nbsp;$rs[customer_contact_number]</td>
 							    <td>&nbsp;  <a href='Productpurchasebill.php?editid=$rs[product_purchase_bill_id]'>Edit</a> |  <a href='viewProductpurchasebill.php?deleteid=$rs[product_purchase_bill_id]'onclick='return delconfirm()'>Delete</a></td>
 						      </tr>";

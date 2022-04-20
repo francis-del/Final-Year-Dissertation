@@ -103,7 +103,7 @@ include("footer.php");
 <script type="application/javascript">
 function delconfirm()
 {
-	if(confirm("Are you sure you want to delete this record?") == true)
+	if(confirm("Do you want to go Ahead with this?") == true)
 	{
 		return true;
 	}

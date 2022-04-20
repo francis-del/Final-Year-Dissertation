@@ -57,8 +57,8 @@ if(isset($_GET['deleteid']))
 <tr>
 						      <th><strong>Product</strong></th>
 						      <th><strong>Quantity</strong></th>
-						      <th><strong>Request Date</strong></th>
-						      <th><strong>Expiry Date</strong></th>
+						      <th><strong>Request Date</strong><input type="date" id="request_date" name="date"</th>
+						      <th><strong>Expiry Date</strong><input type="date" id="request_date" name="date"</th>
 						      <th><strong>Note</strong></th>
 						      <th><strong>Status</strong></th>
                                 <th><strong>Action</strong></th>

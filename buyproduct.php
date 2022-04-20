@@ -4,7 +4,7 @@ if($_SESSION['randnumber']  == $_POST['randnumber'])
 { 
 	if(isset($_POST['submitdetail']))
 	{
-		$sql="INSERT INTO product_purchase_bill( customer_id, country_id, state_id, city_id, customer_name, customer_address, pincode, customer_contact_number, purchase_date, status,payment_type ,payment_description,seller_id) VALUES ('$_SESSION[customerid]','$_POST[cstcountry]','$_POST[cststate]','$_POST[cstcity]','$_POST[cstname]','$_POST[cstaddress]','$_POST[cstpincode]','$_POST[cstcontact]','$dt','Active','$_POST[paymenttype]','Card type - $_POST[cardtype] , Card number - $_POST[cardnumber] ,  CVV number - $_POST[cvvnumber]','$_SESSION[sellerid]') ";
+		$sql="INSERT INTO product_purchase_bill( customer_id, country_id, state_id, city_id, customer_name, customer_address, postcode, customer_contact_number, purchase_date, status,payment_type ,payment_description,seller_id) VALUES ('$_SESSION[customerid]','$_POST[cstcountry]','$_POST[cststate]','$_POST[cstcity]','$_POST[cstname]','$_POST[cstaddress]','$_POST[cstpostcode]','$_POST[cstcontact]','$dt','Active','$_POST[paymenttype]','Card type - $_POST[cardtype] , Card number - $_POST[cardnumber] ,  CVV number - $_POST[cvvnumber]','$_SESSION[sellerid]') ";
 		if(!mysqli_query($con,$sql))
 		{
 			echo "Error in mysqli query";
@@ -76,7 +76,7 @@ $rscustomer = mysqli_fetch_array($qsqlcustomer);
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
             <div class="info mt-4 ">
 			
-		<center><h4>Complete your order by Making Payment...</h4></center><hr>
+		<center><h4>Make Payment to Secure Your Order...</h4></center><hr>
 
 <?php
 $i=1;
@@ -86,11 +86,11 @@ $buyingproduct = $_POST['buyingproduct'];
 							<table class="table table-striped table-bordered"  style="width:100%">
 								<THEAD>
 							  <tr>
-      <th><strong>&nbsp;Image</strong></th>
+      <th><strong>&nbsp;Product Image</strong></th>
       <th><strong>&nbsp;Product detail</strong></th>
-      <th><strong>&nbsp;Product Cost</strong></th>
-      <th><strong>&nbsp;Quantity</strong></th>
-      <th><strong>&nbsp;Total</strong></th>
+      <th><strong>&nbsp;Product Price</strong></th>
+      <th><strong>&nbsp;Product Quantity</strong></th>
+      <th><strong>&nbsp;Order Total</strong></th>
 						      </tr>
 								</THEAD>
 								<TBODY>
@@ -109,9 +109,9 @@ $buyingproduct = $_POST['buyingproduct'];
 						<tr>
 						<td>&nbsp;<img src='imgsellingproduct/$rs1[product_img1]' width='75' height='75'></td>
 						  <td>&nbsp;$rs1[product_description]</td>
-						  <td>&nbsp;$rupeesymbol $rs[cost]</td>
-						  <td>&nbsp;$rs[quantity]</td>
-						  <td>&nbsp;<span id='calccost$i'>$rupeesymbol " . $rs['cost'] * $rs['quantity'] ."</span></td>					  
+						  <td>&nbsp;$gbpsymbol $gbp[cost]</td>
+						  <td>&nbsp;$gbp[quantity]</td>
+						  <td>&nbsp;<span id='calccost$i'>$gbpsymbol " . $rs['cost'] * $rs['quantity'] ."</span></td>					  
 						</tr>";
 						$i++;
 						$tot = $tot + ( $rs['cost'] * $rs['quantity'] );
@@ -121,8 +121,8 @@ $buyingproduct = $_POST['buyingproduct'];
 								</TBODY>
 								<tfoot>
     <tr>
-      <th colspan="4" style="text-align: right;"><strong>Grand total</strong></th>
-      <th>&nbsp;<?php echo $rupeesymbol; ?>  <?php echo $tot; ?></th>
+      <th colspan="4" style="text-align: right;"><strong>Purchase Total</strong></th>
+      <th>&nbsp;<?php echo $gbpsymbol; ?>  <?php echo $tot; ?></th>
     </tr>								
 								</tfoot>
 						  </table>
@@ -142,23 +142,23 @@ $buyingproduct = $_POST['buyingproduct'];
 				  
 <div class="form-row">
 	<div class="col-md-6 form-group">
-	Customer Name <font color="#FF0000">*</font>
+	Customer Name <font color="#472D30">*</font>
 	  <input type="text" name="cstname" id="cstname" value="<?php echo $rscustomer['customer_name']; ?><?php echo $rscustomer['seller_name']; 
 	  ?>" autofocus class="form-control" >
 	</div>	
 	
 	<div class="col-md-6 form-group">
-	Contact Number <font color="#FF0000">*</font>
+	Contact Number <font color="#472D30">*</font>
 	  <input type="text" name="cstcontact" id="cstcontact" value="<?php echo $rscustomer['mobile_no']; ?>" autofocus class="form-control" >
 	</div>	
 	
 		<div class="col-md-12 form-group">
-	Address <font color="#FF0000">*</font>
+	Address <font color="#472D30">*</font>
 	  <textarea name="cstaddress" id="cstaddress" class="form-control"><?php echo $rscustomer['address']; ?><?php echo $rscustomer['seller_address']; ?></textarea>
 	</div>	
 	
 	<div class="col-md-6 form-group">
-		Country <font color="#FF0000">*</font>
+		Country <font color="#472D30">*</font>
 	  <select name="cstcountry" id="cstcountry" onChange="loadstate(this.value)" class="form-control">
        <option value="">Select Country</option>
                                   <?php
@@ -203,7 +203,7 @@ echo "<option value='$rssql2[state_id]'>$rssql2[state]</option>";
 	</div>	
 	
 	<div class="col-md-6 form-group">
-	City <font color="#FF0000">*</font>
+	City <font color="#472D30">*</font>
 	  <span id='loadcity'><select name="cstcity" id="cstcity" class="form-control">
     <option value="">Select</option>
     <?php
@@ -225,17 +225,17 @@ echo "<option value='$rssql2[state_id]'>$rssql2[state]</option>";
 	</div>	
 	
 	<div class="col-md-6 form-group">
-	PIN Code <font color="#FF0000">*</font>
+	Post Code <font color="#472D30">*</font>
 	  <input type="text" name="cstpincode" id="cstpincode" value="<?php echo $rscustomer['customer_name']; ?>" autofocus class="form-control" >
 	</div>	
 	
 	
 	<div class="col-md-6 form-group">
-	Payment type <font color="#FF0000">*</font>
+	Payment type <font color="#472D30">*</font>
 	  <select name="paymenttype" id="paymenttype" onChange="funpaymenttype(this.value)" autofocus class="form-control">
         <option value="">Select</option>
         <?php
-			$arr =array("Card Payment","Cash on delivery");
+			$arr =array("Card Payment","Cash on delivery","Stripe");
 			foreach($arr as $val)
 			{
 				echo "<option value='$val'>$val</option>";
@@ -350,10 +350,10 @@ function funpaymenttype(paytype)
 		document.frmcstdetail.cstcity.focus();
 		return false;
 	}
-	else if(document.frmcstdetail.cstpincode.value == "")
+	else if(document.frmcstdetail.cstpostcode.value == "")
 	{
-		alert("Kindly enter the PIN Code..");
-		document.frmcstdetail.cstpincode.focus();
+		alert("Kindly enter the Post Code..");
+		document.frmcstdetail.cstpostcode.focus();
 		return false;
 	}
 	else if(document.frmcstdetail.cstcontact.value == "")
@@ -370,19 +370,19 @@ function funpaymenttype(paytype)
 	}
 	else if(document.frmcstdetail.cardtype.value == "")
 	{
-		alert("Kindly select the card type..");
+		alert("Select the card type..");
 		document.frmcstdetail.cardtype.focus();
 		return false;
 	}
 		else if(document.frmcstdetail.cardnumber.value == "")
 	{
-		alert("Kindly enter the card number..");
+		alert("Enter the card number..");
 		document.frmcstdetail.cardnumber.focus();
 		return false;
 	}
 	else if(document.frmcstdetail.cardnumber.value.length < 16)
 	{
-		alert("Kindly enter a valid 16 digit Card Number...");
+		alert("Enter a valid 16 digit Card Number...");
 		document.frmcstdetail.cardnumber.focus();
 		return false;
 	}	
@@ -395,13 +395,13 @@ function funpaymenttype(paytype)
 	}	
 	else if(document.frmcstdetail.cvvnumber.value == "")
 	{
-		alert("Kindly enter CVV Number..");
+		alert("Enter CVV Number..");
 		document.frmcstdetail.cvvnumber.focus();
 		return false;
 	}
 	else if(document.frmcstdetail.expdate.value == "")
 	{
-		alert("Kindly select the Expiry Date..");
+		alert("Select the Expiry Date..");
 		document.frmcstdetail.expdate.focus();
 		return false;
 	}

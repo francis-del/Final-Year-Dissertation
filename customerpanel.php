@@ -65,10 +65,10 @@ if(isset($_SESSION['customerid']))
 		 <?php echo $rs1['country']; ?><br />
 		 </td>
 		</tr>  
-		<tr>
+		<!-- <tr>
 		  <th height="35" align="left"><strong>Mobile Number</strong></th>
 		  <td><?php echo $rsdisp['mobile_no']; ?></td>
-		</tr>
+		</tr> -->
 		<tr>
 		  <th height="39" align="left"><strong>Home Number</strong></th>
 		  <td><?php echo $rsdisp['contact_no']; ?></td>

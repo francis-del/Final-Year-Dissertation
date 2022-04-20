@@ -1,3 +1,7 @@
 {
 
+    "require": {
+        "phpmailer/phpmailer": "^6.6",
+        "symfony/intl": "^6.0"
+    }
 }

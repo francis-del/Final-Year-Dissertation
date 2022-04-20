@@ -673,7 +673,7 @@ INSERT INTO `selling_product` (`selling_prod_id`, `category_id`, `product_name`,
 (5, 20, 'Bio Fertilizers', 'The fertilisers are made from biological wastes, hence the term biofertilizers, and do not include any chemicals harmful to the live soil.', '20104bio1.jpg', '4129bio2.jpg', '7238bio3.jpg', '3591bio4.jpg', '19252bio5.jpg', 'Kilogram', 350.00, 'Active'),
 (6, 12, 'Digging Shovel', 'Blade and socket lengthened for maximum strength PORATED POWER STEP reduces material build up Fibreglass handle', '27928shovel1.jpg', '29553shovel2.jpg', '17750shovel3.jpg', '27095shovel4.jpg', '17092shovel5.jpg', 'Piece', 300.00, 'Active'),
 (7, 24, 'Organic Fertilizer', 'Organic farming practises include crop rotation, green manure composting, and biological pest management. It uses practises including crop rotation, green manure compost, and biological pest management.', '19660org1.jpg', '2837org2.jpg', '20010org3.jpg', '17435org4.jpg', '27064org5.jpg', 'Kilogram', 160.00, 'Active'),
-(8, 26, 'Cucumber Seeds', 'New, unused, undamaged, and functionally correct object that has never been used. Check out the seller\'s ad for all the specifics.', '1783cucumber sed.jpg', '26980cucumberseed2.jpeg', '1997cucumberseed3.jpg', '30850cucumberseed4.jpg', '', 'Gram', 70.00, 'Active'),
+(8, 26, 'Cucumber Seeds', 'New, unused, undamaged, and functionally correct object that has never been used. Check out the seller\s ad for all the specifics.', '1783cucumbersed.jpg', '26980cucumberseed2.jpeg', '1997cucumberseed3.jpg', '30850cucumberseed4.jpg', '', 'Gram', 70.00, 'Active'),
 (9, 12, 'Transfer Shovel', 'Tempered steel blade is long-lasting.\r\nComfort and control are achieved through the use of a footstep.\r\nThe handle is made of strong hardwood and has a poly D grip.', '9240transfershovel1.jpg', '24177transfershovel2.jpg', '21590transfershovel3.jpg', '19671transfershovel4.jpg', '', 'Piece', 250.00, 'Active'),
 (10, 12, 'Spades', 'The blade is made of heavy-duty steel that has been tempered for maximum strength.\r\nFor comfort and control, take a step.\r\nArmor D grip on a strong hardwood handle', '24546spades1.jpg', '24435spades2.jpg', '24112spades3.jpg', '27305spade4.jpg', '', 'Piece', 699.99, 'Active'),
 (12, 12, 'Rake', 'it is a simple horticultural tool intended for raking, it consists of a long wooden handle and a serrated wooden or metal', '22222rake1.jpg', '22222rake2.jpg', '22222rake3.jpg', '22222rake4.jpg', '22222rake5.jpg', '40', 899.99, 'Active');
@@ -768,7 +768,7 @@ CREATE TABLE `variety` (
 --
 
 INSERT INTO `variety` (`variety_id`, `category_id`, `produce_id`, `variety`, `description`, `img`, `status`) VALUES
-(1, 1, 1, 'Dwarf Cavendish', 'Dwarf Cavendish leaves are broad with short petioles. Its shortness makes it stable, wind resistant, and easier to manage. This, in addition to its fast growth rate, makes it ideal for plantation cultivation.An easily recognizable characteristic of this cultivar is that the male bracts and flowers are not shed.\r\nThe fruits of the Dwarf Cavendish cultivar range from about 15 to 25 cm in length, and are thin skinned. Each plant can bear up to 90 fingers.', '8569dwarfcavendish.png', 'Active'),
+(1, 1, 1, 'Dwarf Cavendish', 'Dwarf Cavendish leaves are broad with short petioles. Its shortness makes it stable, wind resistant, and easier to manage. This, in addition to its fast growth rate, makes it ideal for plantation cultivation, An easily recognizable characteristic of this cultivar is that the male bracts and flowers are not shed.\r\nThe fruits of the Dwarf Cavendish cultivar range from about 15 to 25 cm in length, and are thin skinned. Each plant can bear up to 90 fingers.', '8569dwarfcavendish.png', 'Active'),
 (2, 1, 1, 'Karpuravalli', 'It is a popular variety grown for table purpose in medium rich soils. Its commercial cultivation is spread over in Central and Southern districts of Tamil Nadu and Kerala. In Bihar, cultivation is in patches under the name Kanthali. Karpuravalli is a tall, robust plant well suited to marginal lands and soils, produced under low input conditions. It is also the sweetest among Indian bananas. Karpuravalli is occasionally seeded depending on the seasonal variability. Its ash coated golden yellow and sweet fruits have good keeping quality. Karpuravalli is highly susceptible to wilt disease, tolerant to leaf spot disease and well suited for drought, salt affected areas and for low input conditions.', '6943karpuravalli.jpg', 'Active'),
 (3, 1, 1, 'Kadali', 'Kadali is a small and sweet fruited variety of banana. the variety is mainly grown for offerings in temple. The variety is known by names like Ambalakadali, Nivedya kadali etc. The fruits are small but sweet. The average bunch weight is 8 to 10 kg. And, the market for the fruit is always assured.', '11884kathali.png', 'Active'),
 (4, 1, 1, 'Monthan', 'It is a widely cultivated variety for processing. Monthan is a fairly tall and robust plant bearing bunches of 18 to 20 kg after 12 months. Fruits are bold, stocky, knobbed and pale green in colour. The skin is usually green. The new prolific Monthan type clones of economic value namely  Kanchi Vazhai and  Chakkia are recently becoming popular in Tamil Nadu. Apart from its culinary use of fruits, pseudostem core is a highly relished vegetable with many medicinal properties. Monthan is also cultivated for production of leaves in Trichy and Tanjore districts of Tamil Nadu. It has many desirable qualities like immunity to Banana Bunchy Top Virus diseases, salt tolerance and normal bunch mass even under marginal condition, but it is highly susceptible to Fusarium wilt disease.', '23605monthan.jpg', 'Active'),
@@ -1466,6 +1466,71 @@ INSERT INTO `worker_request` (`worker_request_id`, `worker_id`, `seller_id`, `fr
 (2, 1, 2, '2022-03-11', '2022-03-14', 'Harvesting & Composting', 1, 9, 7, 750.00, 'Wage', 'Approved', 'Rejected', 'Machinery provided', '08-Mar-2022 09:49:44 - Location is inconvenient \r\n '),
 (3, 1, 1, '2022-03-11', '2022-03-14', 'Fertilizing', 1, 11, 10, 890.00, 'Wage', 'Approved', 'Rejected', 'testing', '02-Mar-2022 09:16:13 - Thank you for the opportunity \r\n '),
 (4, 1, 2, '2022-03-11', '2022-03-14', 'Composting and manure', 2, 39, 35, 650.00, 'Salary', 'Approved', 'Rejected', 'testing comment', '');
+
+
+
+--
+-- Table structure for table `tbl_payment`
+--
+
+CREATE TABLE `tbl_payment` (
+  `id` int(11) NOT NULL,
+  `order_hash` varchar(255) NOT NULL,
+  `payer_email` varchar(100) NOT NULL,
+  `amount` double(10,2) NOT NULL,
+  `currency` varchar(25) NOT NULL,
+  `payment_type` varchar(25) NOT NULL,
+  `order_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `order_status` varchar(25) NOT NULL,
+  `notes` text NOT NULL,
+  `name` varchar(25) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `country` varchar(25) NOT NULL,
+  `postal_code` varchar(25) NOT NULL,
+  `stripe_payment_intent_id` varchar(255) NOT NULL,
+  `payment_status` varchar(25) NOT NULL,
+  `stripe_payment_status` varchar(25) NOT NULL,
+  `stripe_payment_response` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+-- Table structure for table `transactions`
+--
+
+CREATE TABLE `transactions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `customer_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `customer_email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `item_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `item_number` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `item_price` float(10,2) NOT NULL,
+  `item_price_currency` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `paid_amount` float(10,2) NOT NULL,
+  `paid_amount_currency` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `txn_id` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `payment_status` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tbl_payment`
+--
+ALTER TABLE `tbl_payment`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tbl_payment`
+--
+ALTER TABLE `tbl_payment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Indexes for dumped tables

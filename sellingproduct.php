@@ -141,36 +141,36 @@ if(isset($_GET['editid']))
 	</div>	
 	
 	<div class="col-md-6 form-group">
-	Product Name <font color="#FF0000">*</font>
+	Product Name <font color="#15616D">*</font>
 	  <input type="text" name="productname" id="productname" value="<?php echo $rsedit['product_name']; ?>" class="form-control" >
 	</div>	
 	
 	
 	<div class="col-md-12 form-group">
-	Product Description <font color="#FF0000">*</font>
+	Product Description <font color="#15616D">*</font>
 	  <textarea  name="productdescription" id="productdescription" class="form-control" ><?php echo $rsedit['product_description']; ?></textarea>
 	</div>	
 	
 		
 	
 	<div class="col-md-6 form-group">
-	Image 1 (Primary image) <font color="#FF0000">*</font>
+	Image 1 (Primary image) <font color="#15616D">*</font>
 	  <input type="file" name="img1" id="img1" class="form-control">
 	</div>	
 	<div class="col-md-6 form-group">
-	Image 2<font color="#FF0000">*</font>
+	Image 2<font color="#15616D">*</font>
 	  <input type="file" name="img2" id="img2" class="form-control">
 	</div>	
 	<div class="col-md-6 form-group">
-	Image 3<font color="#FF0000">*</font>
+	Image 3<font color="#15616D">*</font>
 	  <input type="file" name="img3" id="img3" class="form-control">
 	</div>	
 	<div class="col-md-6 form-group">
-	Image 4<font color="#FF0000">*</font>
+	Image 4<font color="#15616D">*</font>
 	  <input type="file" name="img4" id="img4" class="form-control">
 	</div>	
 	<div class="col-md-6 form-group">
-	Image 5<font color="#FF0000">*</font>
+	Image 5<font color="#15616D">*</font>
 	  <input type="file" name="img5" id="img5" class="form-control">
 	</div>
 	
@@ -179,7 +179,7 @@ if(isset($_GET['editid']))
 	</div>
 	
 	<div class="col-md-6 form-group">
-	Quantity Type <font color="#FF0000">*</font>
+	Quantity Type <font color="#15616D">*</font>
 	  <select name="quantitytype" id="quantitytype" autofocus class="form-control">
 		<option value="">Select</option>
 		  <?php
@@ -229,7 +229,7 @@ if(isset($_GET['editid']))
 </div>
 
 <hr>
-<button type="submit" name="submit" id="submit" class="btn btn-info btn-lg btn-block" >Submit</button>
+<button type="submit" name="submit" id="submit" class="btn btn-info btn-lg btn-block" >Submit Now</button>
 
 </form>
             </div>

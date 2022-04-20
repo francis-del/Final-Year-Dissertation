@@ -115,10 +115,10 @@ POST Code: <?php echo $rsseller['postcode']; ?><br>
 <table width="755" border="0" class="table table-bordered">
   <tbody>
     <tr>
-      <th><strong>Image</strong></th>
+      <th><strong>Product Image</strong></th>
       <th><strong>Product Name</strong></th>
-      <th><strong>Quantity</strong></th>
-      <th><strong>Total</strong></th>
+      <th><strong>Product Quantity</strong></th>
+      <th><strong>Product Total</strong></th>
     </tr>
       <?php
 	  		$i=1;
@@ -132,15 +132,15 @@ POST Code: <?php echo $rsseller['postcode']; ?><br>
 					<tr>
 					<td>&nbsp;<img src='imgproduct/$rsproduct[img_1]' width='25' height='25'></td>
 					  <td>&nbsp;$rsproduct[title]</td>
-					  <td>&nbsp;$rupeesymbol $rspurchase_order[quantity]&nbsp;$rsproduct[quantity_type]</td>
-					  <td>&nbsp;<span id='calccost$i'>$rupeesymbol " . $rspurchase_order['purchase_amt'] ."</span></td>					  
+					  <td>&nbsp;$GBPsymbol $rspurchase_order[quantity]&nbsp;$rsproduct[quantity_type]</td>
+					  <td>&nbsp;<span id='calccost$i'>$GBPsymbol " . $rspurchase_order['purchase_amt'] ."</span></td>					  
 					</tr>";
 	  ?>
     <tr>
       <th height="33" scope="row">&nbsp;</th>
       <th>&nbsp;</th>
       <th><strong>Grand total</strong></th>
-      <th>&nbsp; <?php echo $rupeesymbol; ?> <?php echo $rspurchase_order['purchase_amt']; ?></th>
+      <th>&nbsp; <?php echo $GBPsymbol; ?> <?php echo $rspurchase_order['purchase_amt']; ?></th>
 
     </tr>
   </tbody>
@@ -166,7 +166,7 @@ POST Code: <?php echo $rsseller['postcode']; ?><br>
                                 echo "<strong> &nbsp;Bank Name: </strong> ". $rsseller['bank_name'] . "<br>";
                                 echo "<strong> &nbsp;Bank Account number: </strong> " .$rsseller['bank_acno'] . "<br>";
                                 echo "<strong> &nbsp;Branch: </strong> ".$rsseller['bank_branch'] . "<br>";
-                                echo "<strong> &nbsp;IFSC Code: </strong> ". $rsseller['bank_IFSC'] . "<br>";			
+                                echo "<strong> &nbsp;Sort Code: </strong> ". $rsseller['bank_sortcode'] . "<br>";			
 								?>
                                 </th>
 			                  </tr>

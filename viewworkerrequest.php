@@ -63,7 +63,8 @@ if(isset($_GET['deleteid']))
 								<THEAD>
 							  <tr>
 						        <th width="192" height="39"><strong>Profile</strong>
-						        <th width="153" height="39"><strong>Date</strong>
+						        <th width="153" height="39"><strong>Date
+								</strong>
 						        <th width="175"><strong>Task</strong></th>
 						        <th width="189"><strong>Fram Work Location</strong></th>
 						        <th width="102"><strong>Status</strong></th>                                                               
@@ -183,7 +184,7 @@ include("footer.php");
 <script type="application/javascript">
 function delconfirm()
 {
-	if(confirm("Are you sure you want to delete this record?") == true)
+	if(confirm("Want to proceed?") == true)
 	{
 		return true;
 	}

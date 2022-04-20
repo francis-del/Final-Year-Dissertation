@@ -108,9 +108,14 @@ if(isset($_GET['prodid']))
 						 }
 						?>
 <hr>
-<center>
+<hr>
+<button class="stripe-button" id="payButton" >
+	<div class=""spinner hidden" id="spinner></div>
+	<span id="buttonText">Confirm Your Order</span>
+</button>
+/* <center>
 <input type="submit" name="submit" id="submit" value="Confirm your order" autofocus class="btn btn-success">
-</center>
+</center> */
             </div>
 		  </div>
 		  
@@ -124,6 +129,10 @@ if(isset($_GET['prodid']))
   
 <?php
 include("footer.php");
+include("payment-status.php");
+include("payment_init.php");
+include("success.php");
+include("config.php");
 ?>
 <script type="application/javascript">
 function changecost(totqty,purchaseid,divid)

@@ -136,8 +136,10 @@ if(isset($_POST['submit']))
 						    <tr>
 						      <td>&nbsp;$rs1[title]</td>
 						      <td>&nbsp;$rs[3]</td>
-						      <td>&nbsp;$rs[request_date]</td>
-						      <td>&nbsp;$rs[request_date_expire]</td>
+						      <td>&nbsp;$rs[request_date]
+							  <input type="date" id="request_date" name="date"</td>
+						      <td>&nbsp;$rs[request_date_expire]
+							  <input type="date" id="request_date" name="date"</td>
 						      <td>&nbsp;$rs[note]</td>
 						      <td>&nbsp;$rs[7]</td>
 					        </tr>";
@@ -221,7 +223,7 @@ include("footer.php");
 	
 function delconfirm()
 {
-	if(confirm("Are you sure you want to delete this record?") == true)
+	if(confirm("Want to proceed with this operation?") == true)
 	{
 		return true;
 	}

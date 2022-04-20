@@ -1,5 +1,7 @@
 <?php
 include("header.php");
+require_once 'config.php';
+
 if($_SESSION['randnumber']  == $_POST['randnumber'])
 {
 if(isset($_GET['deleteid']))
@@ -106,7 +108,7 @@ $_SESSION['randnumber'] = $randnumber;
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
             <div class="info mt-4 ">
 			
-		<center><h4>Purchase Order Payment Detail...</h4></center><hr>
+		<center><h4>Order Purchased Detail...</h4></center><hr>
 
 							<table  class="table table-striped table-bordered"  style="width:100%">
 								<THEAD>
@@ -139,7 +141,7 @@ $_SESSION['randnumber'] = $randnumber;
 							      <td>&nbsp;$rs1[title]</td>
 									  <td>&nbsp;$rs2[customer_name]</td>
 									  <td>&nbsp;$rs[purchase_order_date]</td>
-									  <td>&nbsp;$rupeesymbol $rs[purchase_amt]</td>
+									  <td>&nbsp;$gbpsymbol $rs[purchase_amt]</td>
 									  <td>&nbsp;$rs[quantity] $rs1[quantity_type]</td>
 									  <td>&nbsp;$rs[status]</td>	
 						      </tr>";
@@ -212,8 +214,11 @@ $_SESSION['randnumber'] = $randnumber;
 </div>
 
 <hr>
-<button type="submit" name="submit" id="submit" class="btn btn-info btn-lg btn-block" >Make Payment</button>
-
+<button class="stripe-button" id="payButton" >
+	<div class=""spinner hidden" id="spinner></div>
+	<span id="buttonText">Make Payment</span>
+</button>
+			</hr>
 </form>
             </div>
 		  </div>
