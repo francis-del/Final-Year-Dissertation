@@ -67,7 +67,7 @@ if(isset($_GET['editid']))
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Farmer Registration Panel</h2>
+          <h2>Farmer Registration Page</h2>
           <ol>
             <li><a href="index.php">Home</a></li>
           </ol>
@@ -94,7 +94,7 @@ if(isset($_GET['editid']))
                 <div class="icon-box" data-aos="zoom-in" data-aos-delay="100" style="width: 100%;text-align: left;">
 <form method="post" action="" name="frmsellreg" onSubmit="return validatesellreg()">
 <input type="hidden" name="randnumber" value="<?php echo $randnumber; ?>" >
-                  <h4>Registration Panel</h4>
+                  <h4>Start Your Registration</h4>
 				  
 <div class="form-row">
 	<div class="col-md-6 form-group">
@@ -155,8 +155,8 @@ if(isset($_GET['editid']))
 	</div>
 	
 	<div class="col-md-6 form-group">
-	Pincode <font color="#BBDEFB"> *</font>
-	  <input type="number" name="pincode" id="pincode" value="<?php echo $rsedit['postcode']; ?>" class="form-control">
+	Postcode <font color="#BBDEFB"> *</font>
+	  <input type="text" pattern="[0-9][0-9]{3}\s?[a-zA-Z{2} title="Five digit post code" value="<?php echo $rsedit['postcode']; ?>" class="form-control">
 	</div>
 	
 	<div class="col-md-6 form-group">
@@ -183,7 +183,7 @@ if(isset($_GET['editid']))
 	
 	
 	<div class="col-md-6 form-group">
-	IFSC Code  <font color="#BBDEFB">*</font>
+	Sort Code  <font color="#BBDEFB">*</font>
 	  <input type="text" name="sortcode" id="sortcode" value="<?php echo $rsedit['bank_sortcode']; ?>" autofocus class="form-control" >
 	</div>	
 	
@@ -261,13 +261,13 @@ include("footer.php");
 		  }
 		   else if(document.frmsellreg.postcode.value == "")
 		  {
-			alert("Kindly enter the postcode..");
+			alert("Enter the postcode..");
 			document.frmsellreg.postcode.focus();
 			return false;
 		  }
 		  else if(document.frmsellreg.contactnumber.value == "")
 		  {
-			alert("Kindly enter the contact number..");
+			alert("Enter the contact number..");
 			document.frmsellreg.contactnumber.focus();
 			return false;
 		  }

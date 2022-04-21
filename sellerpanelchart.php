@@ -150,7 +150,7 @@ $(function () {
         },
         yAxis: {
             title: {
-                text: 'Rupees'
+                text: 'Pounds'
             },
             labels: {
                 formatter: function () {
@@ -160,16 +160,16 @@ $(function () {
         },
         tooltip: {
             shared: true,
-            valueSuffix: ' Rupees'
+            valueSuffix: ' Pounds'
         },
         plotOptions: {
             area: {
                 stacking: 'normal',
-                lineColor: '#666666',
+                lineColor: '#735751',
                 lineWidth: 1,
                 marker: {
                     lineWidth: 1,
-                    lineColor: '#666666'
+                    lineColor: '#735751'
                 }
             }
         },

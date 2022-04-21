@@ -12,7 +12,7 @@ include("header.php");
 		<br>
 		<br>
 		<br>
-          <h3>Bill Receipt</h3>
+          <h3>Invoice</h3>
         </div>
 
       </div>
@@ -32,7 +32,7 @@ include("header.php");
             <div class="row">
               <div class="col-md-4">
                 <div class="info w-100 mt-4">
-                  <h4 style="padding: 0 0 0 0px;">Payment Bill:</h4>
+                  <h4 style="padding: 0 0 0 0px;">Product Payment Invoice</h4>
  <?php
 									$sqlbill = "SELECT * FROM purchase_order_bill where purchase_order_bill_id='$_GET[purchase_order_bill_id]'";
 									$qsqlbill = mysqli_query($con,$sqlbill);
@@ -75,21 +75,21 @@ include("header.php");
 								  	$rsselcity = mysqli_fetch_array($qsqlselcity);
 							
 								?>				  
-				  <p style="padding: 0 0 0 0px;"><b>Order Bill Number:</b> <?php echo $rsbill['purchase_order_bill_id']; ?></p>
-				  <p style="padding: 0 0 0 0px;"><b>Paid Date:</b> <?php echo $rsbill['paid_date']; ?></p>
-                  <p style="padding: 0 0 0 0px;"><b>Customer Name:</b> <?php echo $rscustomer['customer_name']; ?></p>
-                  <p style="padding: 0 0 0 0px;"><b>Seller Name:</b> <?php echo $rscustomer['seller_name']; ?></p>
+				  <p style="padding: 0 0 0 0px;"><b>Order Number</b> <?php echo $rsbill['purchase_order_bill_id']; ?></p>
+				  <p style="padding: 0 0 0 0px;"><b>Payment Date</b> <?php echo $rsbill['paid_date']; ?></p>
+                  <p style="padding: 0 0 0 0px;"><b>Customer Name</b> <?php echo $rscustomer['customer_name']; ?></p>
+                  <p style="padding: 0 0 0 0px;"><b>Seller Name</b> <?php echo $rscustomer['seller_name']; ?></p>
                 </div>
               </div>
               <div class="col-md-4 mt-4">
                 <div class="info">
                   <i class="icofont-envelope"></i>
-                  <h4>Customer address:</h4>
+                  <h4>Customer address</h4>
                   <p><?php echo $rscustomer['address']; ?><br>
 					  <?php echo $rscstcity['city']; ?> <br>
 					  <?php echo $rscststate['state']; ?> <br>
 					  <?php echo $rscstcountry['country']; ?> <br>
-					  POST Code:<?php echo $rscustomer['postcode']; ?><br>
+					  POST Code<?php echo $rscustomer['postcode']; ?><br>
 					  Ph. No. <?php echo $rscustomer['contact_no']; ?>
 					  </p>
                 </div>
@@ -97,7 +97,7 @@ include("header.php");
               <div class="col-md-4 mt-4">
                 <div class="info">
                   <i class="icofont-envelope"></i>
-                  <h4>Seller Address:</h4>
+                  <h4>Seller Address</h4>
                   <p><?php echo $rsseller['seller_address']; ?> <br>
                                     <?php echo $rsselcity['city']; ?> <br>
                                     <?php echo $rsselstate['state']; ?> <br>
@@ -132,15 +132,15 @@ POST Code: <?php echo $rsseller['postcode']; ?><br>
 					<tr>
 					<td>&nbsp;<img src='imgproduct/$rsproduct[img_1]' width='25' height='25'></td>
 					  <td>&nbsp;$rsproduct[title]</td>
-					  <td>&nbsp;$GBPsymbol $rspurchase_order[quantity]&nbsp;$rsproduct[quantity_type]</td>
-					  <td>&nbsp;<span id='calccost$i'>$GBPsymbol " . $rspurchase_order['purchase_amt'] ."</span></td>					  
+					  <td>&nbsp; £ $rspurchase_order[quantity]&nbsp;$rsproduct[quantity_type]</td>
+					  <td>&nbsp;<span id='calccost$i'> £ " . $rspurchase_order['purchase_amt'] ."</span></td>					  
 					</tr>";
 	  ?>
     <tr>
       <th height="33" scope="row">&nbsp;</th>
       <th>&nbsp;</th>
       <th><strong>Grand total</strong></th>
-      <th>&nbsp; <?php echo $GBPsymbol; ?> <?php echo $rspurchase_order['purchase_amt']; ?></th>
+      <th>&nbsp; <?php echo £; ?> <?php echo $rspurchase_order['purchase_amt']; ?></th>
 
     </tr>
   </tbody>
@@ -160,7 +160,7 @@ POST Code: <?php echo $rsseller['postcode']; ?><br>
                               
                               
 				              <tr>
-				                <th height="33" scope="row" align="right">&nbsp;<strong>Seller Bank Account detail:</strong></th>
+				                <th height="33" scope="row" align="right">&nbsp;<strong>Seller Bank Account</strong></th>
 				                <th align="left">
 								<?php
                                 echo "<strong> &nbsp;Bank Name: </strong> ". $rsseller['bank_name'] . "<br>";
@@ -173,7 +173,7 @@ POST Code: <?php echo $rsseller['postcode']; ?><br>
 			                </tbody>
 			              </table>
 <hr>
-<center><button onclick="myFunction()" autofocus class="btn btn-primary">Print Bill</button></center>
+<center><button onclick="myFunction()" autofocus class="btn btn-primary">Print Invoice</button></center>
                 </div>
               </div>
             </form>

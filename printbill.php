@@ -89,9 +89,9 @@ $rs3 = mysqli_fetch_array($qsql3);
 					<tr>
 					<td>&nbsp;<img src='imgsellingproduct/$rs1[product_img1]' width='75' height='50'></td>
 					  <td>&nbsp;$rs1[product_name]</td>
-					  <td>&nbsp;$rupeesymbol $rs[cost]</td>
+					  <td>&nbsp;£ $rs[cost]</td>
 					  <td>&nbsp;$rs[quantity]&nbsp;$rs1[quantity_type]</td>
-					  <td>&nbsp;<span id='calccost$i'> $rupeesymbol " . $rs['cost'] * $rs['quantity'] ."</span></td>					  
+					  <td>&nbsp;<span id='calccost$i'> £ " . $rs['cost'] * $rs['quantity'] ."</span></td>					  
 					</tr>";
 					$i++;
 					$tot = $tot + ( $rs['cost'] * $rs['quantity'] );
@@ -102,7 +102,7 @@ $rs3 = mysqli_fetch_array($qsql3);
       <th>&nbsp;</th>
       <th>&nbsp;</th>
       <th><strong>Grand total</strong></th>
-      <th>&nbsp; <?php echo $rupeesymbol; ?> <?php echo $tot; ?></th>
+      <th>&nbsp; £ <?php echo $tot; ?></th>
     </tr>
   </tbody>
 </table>

@@ -79,7 +79,7 @@ if(isset($_SESSION['sellerid']))
 							      <th height="33" align="left"><strong>Bank Details:</strong></th>
 							      <td>
 								  Account No.: <?php echo $rsdisp['bank_acno']; ?><br />
-                                  Bank IFSC Code: <?php echo $rsdisp['bank_IFSC']; ?><br />
+                                  Bank Sort Code: <?php echo $rsdisp['bank_sortcode']; ?><br />
                                   Bank Name: <?php echo $rsdisp['bank_name']; ?><br />
                                   Branch: <?php echo $rsdisp['bank_branch']; ?> <br />
 								</td>

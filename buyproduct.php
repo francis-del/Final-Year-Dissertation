@@ -76,7 +76,7 @@ $rscustomer = mysqli_fetch_array($qsqlcustomer);
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
             <div class="info mt-4 ">
 			
-		<center><h4>Make Payment to Secure Your Order...</h4></center><hr>
+		<center><h4>Pay now to Lock In Your Order</h4></center><hr>
 
 <?php
 $i=1;
@@ -109,9 +109,9 @@ $buyingproduct = $_POST['buyingproduct'];
 						<tr>
 						<td>&nbsp;<img src='imgsellingproduct/$rs1[product_img1]' width='75' height='75'></td>
 						  <td>&nbsp;$rs1[product_description]</td>
-						  <td>&nbsp;$gbpsymbol $gbp[cost]</td>
-						  <td>&nbsp;$gbp[quantity]</td>
-						  <td>&nbsp;<span id='calccost$i'>$gbpsymbol " . $rs['cost'] * $rs['quantity'] ."</span></td>					  
+						  <td>&nbsp; £ [cost]</td>
+						  <td>&nbsp; £[quantity]</td>
+						  <td>&nbsp;<span id='calccost$i'> £ " . $rs['cost'] * $rs['quantity'] ."</span></td>					  
 						</tr>";
 						$i++;
 						$tot = $tot + ( $rs['cost'] * $rs['quantity'] );
@@ -122,7 +122,7 @@ $buyingproduct = $_POST['buyingproduct'];
 								<tfoot>
     <tr>
       <th colspan="4" style="text-align: right;"><strong>Purchase Total</strong></th>
-      <th>&nbsp;<?php echo $gbpsymbol; ?>  <?php echo $tot; ?></th>
+      <th>&nbsp;<?php echo £; ?>  <?php echo $tot; ?></th>
     </tr>								
 								</tfoot>
 						  </table>
@@ -136,7 +136,7 @@ $buyingproduct = $_POST['buyingproduct'];
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
             <div class="info ">
 			
-		<center><h4>Enter Payment Detail...</h4></center><hr>
+		<center><h4>Enter Payment Detail</h4></center><hr>
 
 <input type="hidden" name="randnumber" value="<?php echo $randnumber; ?>" >
 				  
@@ -312,7 +312,7 @@ function funpaymenttype(paytype)
 
 	function validatecstdetail()
 	{
-	var alphaspaceExp = /^[a-zA-Z\s]+$/; //Variable to validate only alphabets and space
+	var alphaspaceExp = /^[a-zA-Z\s]+$/; //validating only alphabets and space
 	var numericExpression = /^[0-9]+$/; //Variable to validate only numbers
 		if(document.frmcstdetail.cstname.value == "")
 	{

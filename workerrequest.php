@@ -209,7 +209,7 @@ if(mysqli_num_rows($qsqlworkrq) >=1 )
 }
 else
 {
-	$changecolor= " style='style='background-color:!important;'";
+	$changecolor= " style='style='background-color: #C89F9C!important;'";
 }
 
 echo $adj."<td height='50' $changecolor><a href='#' onclick=\"post_value($pv);\"><strong>$i</strong></a><br>"; 
@@ -228,7 +228,7 @@ while($rsworkq = mysqli_fetch_array($qsqlworkrq))
 	{
 		if($rsworkq['worker_status'] == "Pending")
 		{
-		echo "<font style='color:green;'>".$rsworkq[worker_status]."</font>";
+		echo "<font style='color:blue;'>".$rsworkq[worker_status]."</font>";
 		}
 		else
 		{
@@ -308,24 +308,24 @@ echo "</tr></table>";
 	</div>		
 	
 	<div class="col-md-4 form-group">
-	State <font color="#FF0000">*</font>
+	State <font color="#403D39">*</font>
 	  <span id='loadstate'><select class="form-control"></select></span>
 	</div>		
 	
 	<div class="col-md-4 form-group">
-	City <font color="#FF0000">*</font>
+	City <font color="#403D39">*</font>
 	  <span id='loadcity'><select class="form-control"></select></span>
 	</div>		
 	
 	
 	
 	<div class="col-md-6 form-group">
-		Payment Amount <font color="#FF0000">*</font>
+		Payment Amount <font color="#403D39">*</font>
 	  <input type="number" name="salary" id="salary" value="<?php echo $rsedit['salary']; ?>" class="form-control">
 	</div>	
 	
 	<div class="col-md-6 form-group">
-	Incentive Type <font color="#FF0000">*</font>
+	Incentive Type <font color="#403D39">*</font>
 	  <select name="salarytype" id="salarytype" class="form-control">
 			<option value="">Select Incentive Type </option>
 		  <?php
@@ -346,14 +346,14 @@ echo "</tr></table>";
 	</div>	
 	
 	<div class="col-md-12 form-group">
-	Any Comments or Note <font color="#FF0000">*</font>
+	Any Comments or Note <font color="#403D39">*</font>
 	  <textarea name="retruitercomment" id="retruitercomment" class="form-control"><?php echo $rsedit['seller_comment']; ?></textarea>
 	</div>	
 	
 </div>
 
 <hr>
-<button type="submit" name="submit" id="submit" class="btn btn-info btn-lg btn-block" >Submit</button>
+<button type="submit" name="submit" id="submit" class="btn btn-info btn-lg btn-block" >Submit Now</button>
 
 </form>
             </div>
@@ -377,31 +377,31 @@ function validateworkrequest()
 	var numericExpression = /^[0-9]+$/; //Variable to validate only numbers
 	if(document.frmworkrequest.fromdate.value == "")
 	{
-		alert("Kindly select date of commencement of work..");
+		alert("Select date of commencement of work..");
 		document.frmworkrequest.fromdate.focus();
 		return false;
 	}	
 	else if(document.frmworkrequest.tilldate.value == "")
 	{
-		alert("Kindly select date of termination of work..");
+		alert("Select date of termination of work..");
 		document.frmworkrequest.tilldate.focus();
 		return false;
 	}
 	else if(document.frmworkrequest.task.value == "")
 	{
-		alert("Task should not be blank..");
+		alert("Task MUST NOT be blank..");
 		document.frmworkrequest.task.focus();
 		return false;
 	}	
 	else if(document.frmworkrequest.country.value == "")
 	{
-		alert("Kindly select the country..");
+		alert("Select the country..");
 		document.frmworkrequest.country.focus();
 		return false;
 	}	
 	else if(document.frmworkrequest.state.value == "")
 	{
-		alert("Kindly select the state..");
+		alert("Select the state..");
 		document.frmworkrequest.state.focus();
 		return false;
 	}	
@@ -419,7 +419,7 @@ function validateworkrequest()
 	}	
 	else if(document.frmworkrequest.salarytype.value == "")
 	{
-		alert("Kindly select the incentive type..");
+		alert("Select the incentive type..");
 		document.frmworkrequest.salarytype.focus();
 		return false;
 	}

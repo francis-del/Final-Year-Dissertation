@@ -93,14 +93,14 @@ if(isset($_POST['submit']))
             <div class="info mt-4">
               <i class="icofont-google-map"></i>
               <h4>Location:</h4>
-              <p>11 harper road, Coventry, UK</p>
+              <p>1 harper road, Coventry, UK</p>
             </div>
             <div class="row">
               <div class="col-lg-6 mt-4">
                 <div class="info">
                   <i class="icofont-envelope"></i>
                   <h4>Email:</h4>
-                  <p>info@farmex.com</p>
+                  <p>farmexfms@gmail.com</p>
                 </div>
               </div>
               <div class="col-lg-6">

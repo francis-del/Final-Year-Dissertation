@@ -5,7 +5,7 @@ include("header.php");
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
-      <h1>Farmex - Change The Way You Market Your Produce...</h1>
+      <h1>Farmex - A platform for Farmers to Market their products with no hassle.....</h1>
       <h2>New and Enhanced Farm Management System to aid commercial farmers and other stakeholders by providing all kinds agriculture marketing and related information in the website...</h2>
       <a href="customerreglogin.php" class="btn-get-started scrollto">Get things Started</a>
     </div>
@@ -102,7 +102,7 @@ $sql = "select * from product";
 $qsql = mysqli_query($con,$sql);
 echo mysqli_num_rows($qsql);
 			?></span>
-            <p>Farmer's Workshop</p>
+            <p>ToolKit Shop</p>
           </div>
 
           <div class="col-lg-2 col-4 text-center">
@@ -111,7 +111,7 @@ $sql = "select * from selling_product";
 $qsql = mysqli_query($con,$sql);
 echo mysqli_num_rows($qsql);
 			?></span>
-            <p>Markets for Farmers</p>
+            <p>Agricultural Market</p>
           </div>
 
           <div class="col-lg-2 col-4 text-center">
@@ -142,7 +142,7 @@ echo mysqli_num_rows($qsql);
                   <div class="icon-box mt-4 mt-xl-0">
                     <h4>Customer</h4>
                     <i class="bx bx-group"></i>
-                    <p>Are you interested in purchasing the Farmer products??<br> <b>Login / Register as Customer</b></p>
+                    <p>Do you want to purchase from the farmer??<br> <b>Login / Register as Customer</b></p>
 					<div class="text-center"><button type="button" class="btn btn-info" onclick="window.location='customerreglogin.php'">Click Here</button></div>
                   </div>
                 </div>

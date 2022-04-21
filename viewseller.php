@@ -25,7 +25,7 @@ if(isset($_GET['deleteid']))
 
         <div class="text-center" data-aos="zoom-in">
 		<br><br>
-          <h3>View Farmer</h3>
+          <h3>Farmer View</h3>
         </div>
 
       </div>
@@ -41,7 +41,7 @@ if(isset($_GET['deleteid']))
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
             <div class="info mt-4 ">
 			
-		<center><h4>Registered Farmers list...</h4></center><hr>
+		<center><h4>List Of Registered Farmers...</h4></center><hr>
 
 <?php
 							 $sql = "SELECT * FROM seller";
@@ -124,7 +124,7 @@ include("footer.php");
 	<script type="application/javascript">
 function delconfirm()
 {
-	if(confirm("Are you sure you want to delete this record?") == true)
+	if(confirm("Are you sure?") == true)
 	{
 		return true;
 	}

@@ -42,7 +42,7 @@ if(isset($_SESSION['adminid']))
           <div class="col-lg-4">
             <div class="section-title" data-aos="fade-right">
               <h2>Farmer Login/Register</h2>
-              <p>A web-based marketplace that connects farmers with customers A free online farm management system where sellers and buyers of farm produce can connect (Buyers meet Farmers)....<br></p>
+              <p>A web-based marketplace that connects farmers with customers A free online farm management system, where sellers and buyers of farm produce can connect (Buyers meet Farmers)<br></p>
             </div>
           </div>
           <div class="col-lg-8">
@@ -51,7 +51,7 @@ if(isset($_SESSION['adminid']))
               <div class="col-md-6 d-flex align-items-stretch">
                 <div class="icon-box" data-aos="zoom-in" data-aos-delay="100" style="width: 100%;">
                   <div class="icon"><i class="bx bx-lock"></i></div>
-                  <h4><a href="sellerloginpanel.php">Existing Farmer</a></h4>
+                  <h4><a href="sellerloginpanel.php">Already Existing</a></h4>
 				        
 				  <button type="button" class="btn btn-info btn-lg btn-block" onclick="window.location='sellerloginpanel.php'">Sign In  & Get Started</button>
                 </div>
@@ -61,7 +61,7 @@ if(isset($_SESSION['adminid']))
                 <div class="icon-box" data-aos="zoom-in" data-aos-delay="200" style="width: 100%;">
                   <div class="icon"><i class="bx bx-file"></i></div>
                   <h4><a href="seller.php">New User</a></h4>
-				  <button type="button" class="btn btn-warning btn-lg btn-block"  onclick="window.location='seller.php'" >Sign Up </button>
+				  <button type="button" class="btn btn-warning btn-lg btn-block"  onclick="window.location='seller.php'" >Not Registered? Sign Up and Start Marketing</button>
                 </div>
               </div>
 

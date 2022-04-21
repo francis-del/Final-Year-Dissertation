@@ -150,8 +150,8 @@ if(isset($_SESSION['workerid']))
 	</div>
 	
 	<div class="col-md-6 form-group">
-	Pincode <font color="#B1A7A6"> *</font>
-	  <input type="number" name="pincode" id="pincode" value="<?php echo $rsedit['pincode']; ?>" class="form-control">
+	Postcode <font color="#B1A7A6"> *</font>
+	<input type="text" pattern="[0-9][0-9]{3}\s?[a-zA-Z{2} title="Five digit post code" value="<?php echo $rsedit['postcode']; ?>" class="form-control">
 	</div>
 	
 	<div class="col-md-6 form-group">
@@ -251,10 +251,10 @@ var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/; //Variable t
 		document.frmworkreg.city.focus();
 		return false;
 	}
-	else if(document.frmworkreg.pincode.value == "")
+	else if(document.frmworkreg.postcode.value == "")
 	{
-		alert("Enter the PIN Code..");
-		document.frmworkreg.pincode.focus();
+		alert("Enter the Post Code..");
+		document.frmworkreg.postcode.focus();
 		return false;
 	}
 	else if(document.frmworkreg.contct.value == "")

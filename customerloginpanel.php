@@ -101,7 +101,7 @@ $_SESSION['randnumber'] = $randnumber;
                 <div class="icon-box" data-aos="zoom-in" data-aos-delay="200" style="width: 100%;">
                   <h4><a href="customerReg.php">New User</a></h4>
                   <div class="icon"><i class="bx bx-file"></i></div>
-				  <button type="button" class="btn btn-warning btn-lg btn-block"  onclick="window.location='customerReg.php'" >Sign Up (It's Free)</button>
+				  <button type="button" class="btn btn-warning btn-lg btn-block"  onclick="window.location='customerReg.php'" >No Registered? Sign Up Now</button>
                 </div>
               </div>
 

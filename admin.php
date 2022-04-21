@@ -68,14 +68,14 @@ if(isset($_GET['editid']))
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
             <div class="info mt-4 ">
 			
-		<center><h4>Enter Admin Detail...</h4></center><hr>
+		<center><h4>Enter Admin Detail</h4></center><hr>
 
 <form method="POST" action="" name="frmadminreg" onSubmit="return validateadminreg()">
 <input type="hidden" name="randnumber" value="<?php echo $randnumber; ?>" >
 				  
 <div class="form-row">
 	<div class="col-md-12 form-group">
-	Admin Name <font color="#FF0000">*</font>
+	Name <font color="#FF0000">*</font>
 	  <input type="text" name="adminname" id="adminname" value="<?php echo $rsedit['admin_name']; ?>" autofocus class="form-control" >
 	</div>	
 	
@@ -87,7 +87,7 @@ if(isset($_GET['editid']))
 	<div class="col-md-12 form-group">
 		Password <font color="#FF0000">*</font>
 	  <input type="Password" name="password" id="password" value="<?php echo $rsedit['password']; ?>" class="form-control" >
-	  <font color="#FF0000"> (Password must be of Minimum 8 Characters and Maximum 16 Characters in length)</font>
+	  <font color="#FF0000"> (Minimum 8 Characters and Maximum 16 Characters)</font>
 	</div>	
 	
 	<div class="col-md-12 form-group">

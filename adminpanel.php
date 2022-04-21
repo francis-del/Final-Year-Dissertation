@@ -42,16 +42,6 @@ include("header.php");
       </td>
     </tr>
     <tr>
-      <!-- <th scope="row">Number of Article records</th> -->
-      <td>&nbsp;
-      <?php
-	  // $sql = "SELECT * FROM article WHERE status='Active'";
-	  $qsql = mysqli_query($con,$sql);
-	  echo mysqli_num_rows($qsql);
-	  ?>
-      </td>
-    </tr>
-    <tr>
        <th scope="row">Category records</th>
       <td>&nbsp;
       <?php

@@ -154,8 +154,8 @@ if(isset($_GET['editid']))
 	</div>
 	
 	<div class="col-md-6 form-group">
-	Pincode <font color="#4B2E39"> *</font>
-	  <input type="number" name="postcode" id="postcode" value="<?php echo $rsedit['postcode']; ?>" class="form-control">
+	Postcode <font color="#4B2E39"> *</font>
+	<input type="text" pattern="[0-9][0-9]{3}\s?[a-zA-Z{2} title="Five digit post code" value="<?php echo $rsedit['postcode']; ?>" class="form-control">
 	</div>
 	
 	<div class="col-md-6 form-group">

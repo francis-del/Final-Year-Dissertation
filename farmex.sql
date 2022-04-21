@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2022 at 07:06 PM
+-- Generation Time: Apr 20, 2022 at 07:19 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -91,8 +91,8 @@ INSERT INTO `category` (`category_id`, `category`, `category_type`, `description
 
 CREATE TABLE `city` (
   `city_id` int(10) NOT NULL,
-  `country_id` int(10) NOT NULL,
-  `state_id` int(10) NOT NULL,
+  `country_id` varchar(30) NOT NULL,
+  `state_id` varchar(30) NOT NULL,
   `city` varchar(25) NOT NULL,
   `description` text NOT NULL,
   `status` varchar(10) NOT NULL
@@ -103,71 +103,71 @@ CREATE TABLE `city` (
 --
 
 INSERT INTO `city` (`city_id`, `country_id`, `state_id`, `city`, `description`, `status`) VALUES
-(2, 1, 18, 'Kajaani', 'Kajaani is a town and municipality in Finland. It is the center and capital of the Kainuu region. It is located southeast of OulujÃ¤rvi, which drains to the Gulf of Bothnia along the Oulujoki. ', 'Active'),
-(3, 4, 4, 'Joensuu', 'Joensuu is a city and municipality in North Karelia in the province of Eastern Finland. It was founded in 1848. The population of Joensuu is 74,941,', 'Active'),
-(4, 4, 5, '	Kuopio', 'Kuopio is a city and a municipality located in the region of Northern Savonia, Finland. A population of 110,999 makes it the eighth biggest city in the country', 'Active'),
-(5, 4, 6, 'Mikkeli', 'Mikkeli is a town and municipality in Finland. It is located in what used to be the province of Eastern Finland and is part of the Southern Savonia region.', 'Active'),
-(6, 4, 7, 'SeinÃ¤joki', 'SeinÃ¤joki is a city located in Southern Ostrobothnia, Finland. SeinÃ¤joki originated around the Ã–stermyra bruk iron and gunpowder factories founded in 1798.', 'Active'),
-(7, 1, 9, '	Itanagar', 'anagar is the capital of the Indian state of Arunachal Pradesh. Itanagar is situated at the foothills of Himalayas. It comes administratively under Papum Pare district. Itanagar is well connected by road. ', 'Active'),
-(8, 1, 10, '	Dispur', 'Dispur /dÉªsËˆpÊŠÉ™r/ is the capital of the state of Assam. Dispur, a locality of Guwahati, became the capital of Assam in 1973.', 'Active'),
-(9, 1, 35, '	Patna', 'is the capital and largest city of the state of Bihar in India. Patna is the second largest city in eastern India after Kolkata.', 'Active'),
-(10, 1, 11, 'Raipur', 'Raipur is a city in the Raipur district of the Indian state of Chhattisgarh. It is the capital city of the state of Chhattisgarh and is the administrative headquarters of Raipur district.', 'Active'),
-(11, 1, 12, '	Panaji', ' is the capital of the Indian state of Goa and the headquarters of North Goa district. It lies on the banks of the Mandovi River estuary in Tiswadi taluka. ', 'Active'),
-(12, 1, 36, '	Gandhinagar', ' is the capital of the state of Gujarat in Western India. Gandhinagar is located approximately 23 km north of Ahmedabad, on the west central point of the Industrial corridor between ', 'Active'),
-(13, 1, 13, '	Chandigarh', 'Chandigarh is a city and a union territory in the northern part of India that serves as the capital of the states of Punjab and Haryana. ', 'Active'),
-(14, 1, 14, '	Shimla', 'Shimla is the capital of the northern Indian state of Himachal Pradesh, in the Himalayan foothills. Once the summer capital of British India, it remains the terminus of the narrow-gauge Kalka-Shimla Railway, ', 'Active'),
-(15, 1, 15, '	Srinagar', ' is the largest city and the summer capital of the Indian state of Jammu and Kashmir. It lies on the banks of the Jhelum River, a tributary of the Indus, and Dal and Anchar lakes. ', 'Active'),
-(16, 1, 16, '	Ranchi', 'Ranchi is the capital of the Indian state of Jharkhand, and its third most populous city of the state.', 'Active'),
-(17, 1, 18, 'Thiruvananthapuram', 'Thiruvananthapuram  is the capital of the southern Indian state of Kerala.', 'Active'),
-(20, 1, 21, '	Imphal', 'The city of Imphal is the capital of the Indian state of Manipur. The ruins of the Palace of Kangla, the royal seat of the erstwhile Kingdom of Manipur, are in the city centre, surrounded by a moat.', 'Active'),
-(21, 1, 22, '	Shillong', 'Shillong is the capital and hill station of Meghalaya, also known as \"The Abode of Clouds\", one of the smallest states in India', 'Active'),
-(22, 1, 23, '	Aizawl', 'Aizawl is the capital of the state of Mizoram in India. With a resident population of 293,416, it is the largest city in the state.', 'Active'),
-(23, 1, 25, '	Bhubaneswar', 'Bhubaneswar, also spelt as Bhubaneshwar /ËŒbÊŠbÉ™ËˆneÉªÊƒwÉ™r/, is the capital of the Indian state of Odisha. The city has a history of over 3,000 years starting with the Mahamegha-bahana Chedi dynasty which had its capital at Sisupalgarh, nearby.', 'Active'),
-(26, 1, 28, '	Gangtok', 'Gangtok is the capital of the northern Indian state of Sikkim. Established as a Buddhist pilgrimage site in the 1840s, the city became capital of an independent monarchy after British rule ended, but joined India in 1975. ', 'Active'),
-(27, 1, 29, 'Chennai', 'Chennai, on the Bay of Bengal in eastern India, is the capital of the Tamil Nadu state. Its home to Fort St. George, built in 1644 and now a museum showcasing the citys roots as a British military garrison', 'Active'),
-(29, 1, 31, '	Agartala', 'Agartala /É™É¡É™rtÉ™ËˆlÉ‘Ë/ is the capital as well as the largest city of the Indian state of Tripura and also is the second largest city in North-east India after Guwahati, both in municipal area and population.', 'Active'),
-(30, 1, 32, '	Lucknow', 'Lucknow is the capital city of the state of Uttar Pradesh, India A major metropolitan city of India,', 'Active'),
-(31, 1, 33, '	Dehradun', ' is the capital city of the state of Uttarakhand in the northern part of India.', 'Active'),
-(32, 1, 34, 'Kolkata', ' is the capital of Indias West Bengal state. Founded as an East India Company trading post', 'Active'),
-(33, 2, 37, 'Montgomery', ' is the capital of the U.S. state of Alabama and is the county seat of Montgomery County.', 'Active'),
-(34, 2, 38, 'Juneau', ' Its a popular cruise-ship stop,', 'Active'),
-(35, 2, 39, 'Phoenix', ' is the capital, and largest city, of the U.S. state of Arizona. With 1,445,632 people ', 'Active'),
-(36, 2, 40, 'Little Rock', 'Little Rock is the capital and the most populous city of the U.S. state of Arkansas. It is also the county seat of Pulaski County. ', 'Active'),
-(37, 2, 41, 'Sacramento', 'Sacramento is the capital city of the U.S. state of California and the seat of government of Sacramento County.', 'Active'),
-(38, 2, 42, 'Denver', 'Denver, the capital of Colorado, is an American metropolis dating to the Old West era', 'Active'),
-(39, 2, 43, 'Hartford', 'Hartford is the capital of Connecticut and the historic seat of Hartford County until Connecticut disbanded county government in 1960.', 'Active'),
-(40, 3, 44, 'Vostochnoe Degunino', 'Vostochnoe Degunino is located in Russia and time zone Europe/Moscow. Places in the near are Altufâ€™yevskiy, Vagonoremont and Zapadnoye Degunino.', 'Active'),
-(41, 3, 45, '	Murmansk', 'Murmansk is a port city and the administrative center of Murmansk Oblast, Russia, located in the extreme northwest part of Russia, on the Kola Bay, an inlet of the Barents Sea on the northern shore', 'Active'),
-(42, 3, 47, '	Nizhniy Novgorod', 'Nizhny Novgorod, colloquially shortened to Nizhny, is, with a population of 1,250,619, the fifth-largest city in Russia and the administrative center of Nizhny Novgorod Oblas', 'Active'),
-(43, 5, 48, 'Hefei', 'Hefei, formerly known as Hofei, Luzhou, or Luchow, is the capital and largest city of Anhui Province in Eastern China', 'Active'),
-(44, 5, 49, 'Fujian', 'Fujian is a southeastern Chinese province known for its mountains and coastal cities', 'Active'),
-(45, 5, 50, 'Lanzhou', 'Lanzhou is the capital and largest city of Gansu Province in Northwest China.', 'Active'),
-(46, 5, 51, 'Guangzhou', 'Guangzhou is a sprawling port city northwest of Hong Kong on the Pearl River.', 'Active'),
-(47, 5, 52, '	Guiyang', 'GuÃ¬yÃ¡ng is the capital of Guizhou province of Southwest China.', 'Active'),
-(48, 5, 53, 'Haikou', 'Haikou, the capital of Chinas island province Hainan', 'Active'),
-(49, 6, 54, 'Stuttgart', 'Stuttgart is the capital and hill station, also known as The Abode of Clouds, one of the smallest states in Germany', 'Active'),
-(50, 6, 55, '	Munich', ' Munich is the capital and hill station, also known as The Abode of Clouds, one of the smallest states in Germany', 'Active'),
-(51, 6, 57, 'Potsdam', 'Potsdam is the capital and hill station, also known as The Abode of Clouds, one of the smallest states in Germany', 'Active'),
-(74, 1, 9, 'Bath', 'it is the largest city in the county of Somerset, England, known for its Roman-built baths, Bath city farm is one of the must-visit places in South West.', 'Active'),
-(75, 1, 9, 'Missouri', '', 'Active'),
-(76, 1, 9, 'Ohio', '', 'Active'),
-(77, 1, 9, '	Wisconsin', '', 'Active'),
-(78, 1, 9, '	Minnesota', '', 'Active'),
-(79, 1, 9, '	Lancashire', '', 'Active'),
-(80, 1, 9, '	Cumbria', '', 'Active'),
-(81, 1, 9, '	Nottingham', '', 'Active'),
-(82, 1, 9, '	Merseyside', '', 'Active'),
-(83, 1, 10, '	Aberystwyth', '', 'Active'),
-(84, 1, 10, '	Brecon Beacons', '', 'Active'),
-(85, 1, 10, '	Kent', '', 'Active'),
-(112, 1, 11, 'Hertfords', '', 'Active'),
-(277, 1, 33, 'Suffolk', '', 'Active'),
-(278, 1, 33, 'Hampshire', '', 'Active'),
-(279, 1, 33, 'Rugby', '', 'Active'),
-(280, 1, 33, 'Minna', '', 'Active'),
-(281, 1, 33, 'Kano', '', 'Active'),
-(282, 1, 34, 'Kaduna', '', 'Active'),
-(283, 1, 34, 'Nassrawa', '', 'Active');
+(2, '1', '18', 'Kajaani', 'Kajaani is a town and municipality in Finland. It is the center and capital of the Kainuu region. It is located southeast of OulujÃ¤rvi, which drains to the Gulf of Bothnia along the Oulujoki. ', 'Active'),
+(3, '4', '4', 'Joensuu', 'Joensuu is a city and municipality in North Karelia in the province of Eastern Finland. It was founded in 1848. The population of Joensuu is 74,941,', 'Active'),
+(4, '4', '5', '	Kuopio', 'Kuopio is a city and a municipality located in the region of Northern Savonia, Finland. A population of 110,999 makes it the eighth biggest city in the country', 'Active'),
+(5, '4', '6', 'Mikkeli', 'Mikkeli is a town and municipality in Finland. It is located in what used to be the province of Eastern Finland and is part of the Southern Savonia region.', 'Active'),
+(6, '4', '7', 'SeinÃ¤joki', 'SeinÃ¤joki is a city located in Southern Ostrobothnia, Finland. SeinÃ¤joki originated around the Ã–stermyra bruk iron and gunpowder factories founded in 1798.', 'Active'),
+(7, '1', '9', '	Itanagar', 'anagar is the capital of the Indian state of Arunachal Pradesh. Itanagar is situated at the foothills of Himalayas. It comes administratively under Papum Pare district. Itanagar is well connected by road. ', 'Active'),
+(8, '1', '10', '	Dispur', 'Dispur /dÉªsËˆpÊŠÉ™r/ is the capital of the state of Assam. Dispur, a locality of Guwahati, became the capital of Assam in 1973.', 'Active'),
+(9, '1', '35', '	Patna', 'is the capital and largest city of the state of Bihar in India. Patna is the second largest city in eastern India after Kolkata.', 'Active'),
+(10, '1', '11', 'Raipur', 'Raipur is a city in the Raipur district of the Indian state of Chhattisgarh. It is the capital city of the state of Chhattisgarh and is the administrative headquarters of Raipur district.', 'Active'),
+(11, '1', '12', '	Panaji', ' is the capital of the Indian state of Goa and the headquarters of North Goa district. It lies on the banks of the Mandovi River estuary in Tiswadi taluka. ', 'Active'),
+(12, '1', '36', '	Gandhinagar', ' is the capital of the state of Gujarat in Western India. Gandhinagar is located approximately 23 km north of Ahmedabad, on the west central point of the Industrial corridor between ', 'Active'),
+(13, '1', '13', '	Chandigarh', 'Chandigarh is a city and a union territory in the northern part of India that serves as the capital of the states of Punjab and Haryana. ', 'Active'),
+(14, '1', '14', '	Shimla', 'Shimla is the capital of the northern Indian state of Himachal Pradesh, in the Himalayan foothills. Once the summer capital of British India, it remains the terminus of the narrow-gauge Kalka-Shimla Railway, ', 'Active'),
+(15, '1', '15', '	Srinagar', ' is the largest city and the summer capital of the Indian state of Jammu and Kashmir. It lies on the banks of the Jhelum River, a tributary of the Indus, and Dal and Anchar lakes. ', 'Active'),
+(16, '1', '16', '	Ranchi', 'Ranchi is the capital of the Indian state of Jharkhand, and its third most populous city of the state.', 'Active'),
+(17, '1', '18', 'Thiruvananthapuram', 'Thiruvananthapuram  is the capital of the southern Indian state of Kerala.', 'Active'),
+(20, '1', '21', '	Imphal', 'The city of Imphal is the capital of the Indian state of Manipur. The ruins of the Palace of Kangla, the royal seat of the erstwhile Kingdom of Manipur, are in the city centre, surrounded by a moat.', 'Active'),
+(21, '1', '22', '	Shillong', 'Shillong is the capital and hill station of Meghalaya, also known as \"The Abode of Clouds\", one of the smallest states in India', 'Active'),
+(22, '1', '23', '	Aizawl', 'Aizawl is the capital of the state of Mizoram in India. With a resident population of 293,416, it is the largest city in the state.', 'Active'),
+(23, '1', '25', '	Bhubaneswar', 'Bhubaneswar, also spelt as Bhubaneshwar /ËŒbÊŠbÉ™ËˆneÉªÊƒwÉ™r/, is the capital of the Indian state of Odisha. The city has a history of over 3,000 years starting with the Mahamegha-bahana Chedi dynasty which had its capital at Sisupalgarh, nearby.', 'Active'),
+(26, '1', '28', '	Gangtok', 'Gangtok is the capital of the northern Indian state of Sikkim. Established as a Buddhist pilgrimage site in the 1840s, the city became capital of an independent monarchy after British rule ended, but joined India in 1975. ', 'Active'),
+(27, '1', '29', 'Chennai', 'Chennai, on the Bay of Bengal in eastern India, is the capital of the Tamil Nadu state. Its home to Fort St. George, built in 1644 and now a museum showcasing the citys roots as a British military garrison', 'Active'),
+(29, '1', '31', '	Agartala', 'Agartala /É™É¡É™rtÉ™ËˆlÉ‘Ë/ is the capital as well as the largest city of the Indian state of Tripura and also is the second largest city in North-east India after Guwahati, both in municipal area and population.', 'Active'),
+(30, '1', '32', '	Lucknow', 'Lucknow is the capital city of the state of Uttar Pradesh, India A major metropolitan city of India,', 'Active'),
+(31, '1', '33', '	Dehradun', ' is the capital city of the state of Uttarakhand in the northern part of India.', 'Active'),
+(32, '1', '34', 'Kolkata', ' is the capital of Indias West Bengal state. Founded as an East India Company trading post', 'Active'),
+(33, '2', '37', 'Montgomery', ' is the capital of the U.S. state of Alabama and is the county seat of Montgomery County.', 'Active'),
+(34, '2', '38', 'Juneau', ' Its a popular cruise-ship stop,', 'Active'),
+(35, '2', '39', 'Phoenix', ' is the capital, and largest city, of the U.S. state of Arizona. With 1,445,632 people ', 'Active'),
+(36, '2', '40', 'Little Rock', 'Little Rock is the capital and the most populous city of the U.S. state of Arkansas. It is also the county seat of Pulaski County. ', 'Active'),
+(37, '2', '41', 'Sacramento', 'Sacramento is the capital city of the U.S. state of California and the seat of government of Sacramento County.', 'Active'),
+(38, '2', '42', 'Denver', 'Denver, the capital of Colorado, is an American metropolis dating to the Old West era', 'Active'),
+(39, '2', '43', 'Hartford', 'Hartford is the capital of Connecticut and the historic seat of Hartford County until Connecticut disbanded county government in 1960.', 'Active'),
+(40, '3', '44', 'Vostochnoe Degunino', 'Vostochnoe Degunino is located in Russia and time zone Europe/Moscow. Places in the near are Altufâ€™yevskiy, Vagonoremont and Zapadnoye Degunino.', 'Active'),
+(41, '3', '45', '	Murmansk', 'Murmansk is a port city and the administrative center of Murmansk Oblast, Russia, located in the extreme northwest part of Russia, on the Kola Bay, an inlet of the Barents Sea on the northern shore', 'Active'),
+(42, '3', '47', '	Nizhniy Novgorod', 'Nizhny Novgorod, colloquially shortened to Nizhny, is, with a population of 1,250,619, the fifth-largest city in Russia and the administrative center of Nizhny Novgorod Oblas', 'Active'),
+(43, '5', '48', 'Hefei', 'Hefei, formerly known as Hofei, Luzhou, or Luchow, is the capital and largest city of Anhui Province in Eastern China', 'Active'),
+(44, '5', '49', 'Fujian', 'Fujian is a southeastern Chinese province known for its mountains and coastal cities', 'Active'),
+(45, '5', '50', 'Lanzhou', 'Lanzhou is the capital and largest city of Gansu Province in Northwest China.', 'Active'),
+(46, '5', '51', 'Guangzhou', 'Guangzhou is a sprawling port city northwest of Hong Kong on the Pearl River.', 'Active'),
+(47, '5', '52', '	Guiyang', 'GuÃ¬yÃ¡ng is the capital of Guizhou province of Southwest China.', 'Active'),
+(48, '5', '53', 'Haikou', 'Haikou, the capital of Chinas island province Hainan', 'Active'),
+(49, '6', '54', 'Stuttgart', 'Stuttgart is the capital and hill station, also known as The Abode of Clouds, one of the smallest states in Germany', 'Active'),
+(50, '6', '55', '	Munich', ' Munich is the capital and hill station, also known as The Abode of Clouds, one of the smallest states in Germany', 'Active'),
+(51, '6', '57', 'Potsdam', 'Potsdam is the capital and hill station, also known as The Abode of Clouds, one of the smallest states in Germany', 'Active'),
+(74, '1', '9', 'Bath', 'it is the largest city in the county of Somerset, England, known for its Roman-built baths, Bath city farm is one of the must-visit places in South West.', 'Active'),
+(75, '1', '9', 'Missouri', '', 'Active'),
+(76, '1', '9', 'Ohio', '', 'Active'),
+(77, '1', '9', '	Wisconsin', '', 'Active'),
+(78, '1', '9', '	Minnesota', '', 'Active'),
+(79, '1', '9', '	Lancashire', '', 'Active'),
+(80, '1', '9', '	Cumbria', '', 'Active'),
+(81, '1', '9', '	Nottingham', '', 'Active'),
+(82, '1', '9', '	Merseyside', '', 'Active'),
+(83, '1', '10', '	Aberystwyth', '', 'Active'),
+(84, '1', '10', '	Brecon Beacons', '', 'Active'),
+(85, '1', '10', '	Kent', '', 'Active'),
+(112, '1', '11', 'Hertfords', '', 'Active'),
+(277, '1', '33', 'Suffolk', '', 'Active'),
+(278, '1', '33', 'Hampshire', '', 'Active'),
+(279, '1', '33', 'Rugby', '', 'Active'),
+(280, '1', '33', 'Minna', '', 'Active'),
+(281, '1', '33', 'Kano', '', 'Active'),
+(282, '1', '34', 'Kaduna', '', 'Active'),
+(283, '1', '34', 'Nassrawa', '', 'Active');
 
 -- --------------------------------------------------------
 
@@ -217,7 +217,8 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`customer_id`, `customer_name`, `address`, `country_id`, `state_id`, `city_id`, `postcode`, `contact_no`, `email_id`, `password`, `customer_type`, `status`) VALUES
-(2, 'Adindu Maduekwe', 'Harper road, 1', 'UK', 'ENG', 'COV', 'cv12al', '07869144440', 'adinducon@gmail.com', 'coventry2022', 'Retailer', 'Active');
+(2, 'Adindu Maduekwe', 'Harper road, 1', 'UK', 'ENG', 'COV', 'cv12al', '07869144440', 'adinducon@gmail.com', 'coventry2022', 'Retailer', 'Active'),
+(9, 'randy', '1 harper road', '1', '11', '112', '1', '07869144440', 'farmexfms@gmail.com', 'Coventry2022', 'Consumer', 'Active');
 
 -- --------------------------------------------------------
 
@@ -452,12 +453,14 @@ CREATE TABLE `product` (
 
 INSERT INTO `product` (`product_id`, `seller_id`, `category_id`, `produce_id`, `variety_id`, `title`, `img_1`, `img_2`, `img_3`, `img_4`, `img_5`, `quantity`, `quantity_type`, `description`, `uploaded_date`, `status`) VALUES
 (3, 1, 1, 174, 127, 'Alphonso Mangoes', '24024rooibos.jpg', '30001', '1046', '8599', '32644', 6.00, 'Kilogram', 'Fresh and Delicious Alphonso Mangoes', '0000-00-00', 'Inactive'),
-(5, 2, 2, 30, 197, 'Pearl Millets', '21030barnyard millet.jpg', '15975finger milelt.jpg', '9236foxtail millet.jpg', '9405', '27314', 5500.00, 'Gram', 'Pearl Millets High Quality', '2016-03-02', 'Active'),
-(6, 1, 1, 16, 112, 'Chandler Blueberry', '926Blueberry Top Hat.jpg', '24191Blueberry-Brigitta.jpg', '7756Blueberry-Chandler.jpg', '16021Blueberry-Earliblue.jpg', '15274Blueberry Top Hat.jpg', 446.00, 'Gram', 'fresh blueberry directly from the farms', '2016-03-03', 'Active'),
+(5, 2, 2, 30, 196, 'Pearl Millets', '21030barnyard millet.jpg', '15975finger milelt.jpg', '9236foxtail millet.jpg', '9405', '27314', 5500.00, 'Gram', 'Pearl Millets High Quality', '2022-03-31', 'Active'),
+(6, 1, 1, 16, 110, 'Chandler Blueberry', '926Blueberry Top Hat.jpg', '24191Blueberry-Brigitta.jpg', '7756Blueberry-Chandler.jpg', '16021Blueberry-Earliblue.jpg', '15274Blueberry Top Hat.jpg', 446.00, 'Gram', 'fresh blueberry directly from the farms', '2022-03-30', 'Active'),
 (7, 1, 15, 215, 322, 'Green Tea', '25506black.jpg', '30771green.jpg', '26608', '4457mate.jpg', '6126', 0.00, 'Gram', 'High Quality green tea hand picked', '0000-00-00', 'Inactive'),
-(8, 1, 6, 70, 580, 'Cashew Nuts', '20894cashew nut.jpg', '5247cahsew nut.jpg', '7244', '25749', '27050', 126.00, 'Gram', 'High Quality.. hand picked', '2016-03-14', 'Active'),
-(9, 2, 2, 31, 206, 'aaaaaaaaaa', '1380031879Untitled.png', '2019543108ONLINE CORONA TRACKER.png', '890261302', '1270836597', '2028688378', 323.00, 'Gram', 'tes', '2020-05-12', 'Active'),
-(10, 3, 1, 1, 2, 'A New Business Opportunity Every Day', '722282313unnamed.jpg', '', '', '', '', 2500.00, 'Gram', 'This email has been sent to you in association with FranchiseIndia.com\r\n\r\nTell Us What You Think! Help us improve our newsletters. Send us your feedback!\r\n\r\n© Copyright 2009 - 2020 Franchise India Holdings Ltd.\r\nAll Rights Reserved.', '2020-05-13', 'Active');
+(8, 1, 6, 70, 480, 'Cashew Nuts', '20894cashew nut.jpg', '5247cahsew nut.jpg', '7244', '25749', '27050', 126.00, 'Gram', 'High Quality.. hand picked', '2022-03-29', 'Active'),
+(10, 3, 1, 1, 4, 'A New Business Opportunity Every Day', '722282313unnamed.jpg', '', '', '', '', 2500.00, 'Gram', '', '2022-05-26', 'Active'),
+(40, 31, 13, 43, 131, 'Egg Plant', '55555eggplant1.jpg', '55555eggplant2.jpg', '55555eggplant3.jpg', '55555eggplant4.jpg', '55555eggplant5.jpg', 101.00, '500', 'The eggplant is a delicate, tropical perennial plant often cultivated as a tender or half-hardy annual in temperate climates.', '2022-04-20', 'Active'),
+(113, 37, 19, 53, 139, 'Long grain Rice', '66666rice1.jpg', '66666rice2.jpg', '66666rice3.jpg', '66666rice4.jpg', '66666rice5.jpg', 101.00, '500', 'Rice is the seed of the grass species Oryza sativa (Asian rice) or less commonly Oryza glaberrima (African rice).', '2022-04-20', 'Active'),
+(233, 73, 122, 105, 76, 'Mango', '25888alphonso.jpg', '31372alphonso.jpg', '22751alphonso.jpg', '4586alphonso.jpg', '10111alphonso.jpg', 100.00, '4500', 'Yellow British Mango', '2022-04-20', 'Active');
 
 -- --------------------------------------------------------
 
@@ -475,7 +478,7 @@ CREATE TABLE `product_purchase_bill` (
   `customer_address` text NOT NULL,
   `postcode` varchar(15) NOT NULL,
   `customer_contact_number` varchar(15) NOT NULL,
-  `purchase_date` date NOT NULL,
+  `purchase_date` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `status` varchar(10) NOT NULL,
   `payment_type` varchar(25) NOT NULL,
   `payment_description` text NOT NULL,
@@ -487,7 +490,10 @@ CREATE TABLE `product_purchase_bill` (
 --
 
 INSERT INTO `product_purchase_bill` (`product_purchase_bill_id`, `customer_id`, `country_id`, `state_id`, `city_id`, `customer_name`, `customer_address`, `postcode`, `customer_contact_number`, `purchase_date`, `status`, `payment_type`, `payment_description`, `seller_id`) VALUES
-(27, 6, 'UK', 'ENG', 'COV', 'Adindu', 'harper road, 1', 'cv12al', '07869144440', '0000-00-00', 'Active', 'Card', '', 0);
+(27, 6, 'UK', 'ENG', 'COV', 'Adindu', 'harper road, 1', 'cv12al', '07869144440', '0000-00-00 00:00:00', 'Active', 'Card', '', 0),
+(56, 9, '1', '11', '112', 'randy', '1 harper road', '', '07869144440', '2022-04-20 00:00:00', 'Active', 'Stripe', 'Card type -  , Card number -  ,  CVV number - ', 0),
+(57, 9, '1', '11', '112', 'randy', '1 harper road', '', '07869144440', '2022-04-20 00:00:00', 'Active', '', 'Card type -  , Card number -  ,  CVV number - ', 0),
+(58, 9, '1', '11', '112', 'randy', '1 harper road', '', '07869144440', '2022-04-20 00:00:00', 'Active', '', 'Card type -  , Card number -  ,  CVV number - ', 0);
 
 -- --------------------------------------------------------
 
@@ -520,7 +526,13 @@ INSERT INTO `product_purchase_record` (`purchase_record_id`, `product_purchase_b
 (45, 44, 1, 1, 1, 200.00, 'Active', 0),
 (46, 45, 3, 1, 2, 350.00, 'Active', 0),
 (47, 46, 3, 1, 20, 350.00, 'Active', 0),
-(82, 55, 7, 8, 1, 460.00, 'Active', 0);
+(82, 55, 7, 8, 1, 460.00, 'Active', 0),
+(86, 0, 5, 9, 1, 350.00, 'Active', 0),
+(87, 0, 1, 9, 1, 300.00, 'Active', 0),
+(88, 0, 7, 9, 1, 160.00, 'Active', 0),
+(89, 56, 2, 9, 1, 450.00, 'Active', 0),
+(90, 57, 4, 9, 1, 1080.00, 'Active', 0),
+(91, 58, 1, 9, 1, 300.00, 'Active', 0);
 
 -- --------------------------------------------------------
 
@@ -606,7 +618,8 @@ INSERT INTO `purchase_request` (`purchase_request_id`, `customer_id`, `product_i
 (13, 2, 3, 89.00, '2022-03-04', '2022-03-11', 'test', 'Pending'),
 (16, 1, 5, 100.00, '2022-03-05', '2022-03-12', 'test', 'Active'),
 (29, 1, 8, 8.00, '2022-03-18', '2022-03-25', 'deliver it', 'Active'),
-(31, 8, 9, 550.00, '2022-04-13', '2020-04-20', 'test purchase request', 'Pending');
+(31, 8, 9, 550.00, '2022-04-13', '2020-04-20', 'test purchase request', 'Pending'),
+(32, 9, 10, 30.00, '2022-04-20', '2022-04-27', '', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -673,10 +686,11 @@ INSERT INTO `selling_product` (`selling_prod_id`, `category_id`, `product_name`,
 (5, 20, 'Bio Fertilizers', 'The fertilisers are made from biological wastes, hence the term biofertilizers, and do not include any chemicals harmful to the live soil.', '20104bio1.jpg', '4129bio2.jpg', '7238bio3.jpg', '3591bio4.jpg', '19252bio5.jpg', 'Kilogram', 350.00, 'Active'),
 (6, 12, 'Digging Shovel', 'Blade and socket lengthened for maximum strength PORATED POWER STEP reduces material build up Fibreglass handle', '27928shovel1.jpg', '29553shovel2.jpg', '17750shovel3.jpg', '27095shovel4.jpg', '17092shovel5.jpg', 'Piece', 300.00, 'Active'),
 (7, 24, 'Organic Fertilizer', 'Organic farming practises include crop rotation, green manure composting, and biological pest management. It uses practises including crop rotation, green manure compost, and biological pest management.', '19660org1.jpg', '2837org2.jpg', '20010org3.jpg', '17435org4.jpg', '27064org5.jpg', 'Kilogram', 160.00, 'Active'),
-(8, 26, 'Cucumber Seeds', 'New, unused, undamaged, and functionally correct object that has never been used. Check out the seller\s ad for all the specifics.', '1783cucumbersed.jpg', '26980cucumberseed2.jpeg', '1997cucumberseed3.jpg', '30850cucumberseed4.jpg', '', 'Gram', 70.00, 'Active'),
+(8, 26, 'Cucumber Seeds', 'New, unused, undamaged, and functionally correct object that has never been used. Check out the seller\'s ad for all the specifics.', '1783cucumber sed.jpg', '26980cucumberseed2.jpeg', '1997cucumberseed3.jpg', '30850cucumberseed4.jpg', '', 'Gram', 70.00, 'Active'),
 (9, 12, 'Transfer Shovel', 'Tempered steel blade is long-lasting.\r\nComfort and control are achieved through the use of a footstep.\r\nThe handle is made of strong hardwood and has a poly D grip.', '9240transfershovel1.jpg', '24177transfershovel2.jpg', '21590transfershovel3.jpg', '19671transfershovel4.jpg', '', 'Piece', 250.00, 'Active'),
 (10, 12, 'Spades', 'The blade is made of heavy-duty steel that has been tempered for maximum strength.\r\nFor comfort and control, take a step.\r\nArmor D grip on a strong hardwood handle', '24546spades1.jpg', '24435spades2.jpg', '24112spades3.jpg', '27305spade4.jpg', '', 'Piece', 699.99, 'Active'),
-(12, 12, 'Rake', 'it is a simple horticultural tool intended for raking, it consists of a long wooden handle and a serrated wooden or metal', '22222rake1.jpg', '22222rake2.jpg', '22222rake3.jpg', '22222rake4.jpg', '22222rake5.jpg', '40', 899.99, 'Active');
+(12, 12, 'Rake', 'it is a simple horticultural tool intended for raking, it consists of a long wooden handle and a serrated wooden or metal', '22222rake1.jpg', '22222rake2.jpg', '22222rake3.jpg', '22222rake4.jpg', '22222rake5.jpg', '40', 899.99, 'Active'),
+(26, 0, 'ginger', 'ginger for cooking and other herbal related stuff', '33333ginger1.jpg', '33333ginger2.jpg', '33333ginger3.jpg', '33333ginger4.jpg', '33333ginger5.jpg', '500', 200.00, 'Active');
 
 -- --------------------------------------------------------
 
@@ -686,7 +700,7 @@ INSERT INTO `selling_product` (`selling_prod_id`, `category_id`, `product_name`,
 
 CREATE TABLE `state` (
   `state_id` int(10) NOT NULL,
-  `country_id` int(10) NOT NULL,
+  `country_id` varchar(10) NOT NULL,
   `state` varchar(25) NOT NULL,
   `description` text NOT NULL,
   `status` varchar(10) NOT NULL
@@ -697,55 +711,47 @@ CREATE TABLE `state` (
 --
 
 INSERT INTO `state` (`state_id`, `country_id`, `state`, `description`, `status`) VALUES
-(3, 4, 'Kainuu', 'Kainuu is one of the 19 Regions of Finland . There are 18 regions in mainland Finland, and the autonomous Ã…land Islands. Kainuu borders the regions of Northern Ostrobothnia, North Karelia and Northern Savonia. In the east it also borders Russia.', 'Active'),
-(4, 3, 'North Karelia', 'North Karelia is a region in eastern Finland. It borders the regions of Kainuu, Northern Savonia, Southern Savonia and South Karelia, as well as Russia. ', 'Active'),
-(5, 4, 'Northern Savonia', 'Northern Savonia is a region in eastern Finland. Kuopio is the largest city in the region. ', 'Active'),
-(6, 4, 'Southern Savonia', 'Southern Savonia is a region in the south-east of Finland. It borders on the regions Northern Savonia, North Karelia, South Karelia, Kymenlaakso, PÃ¤ijÃ¤nne Tavastia, and Central Finland. ', 'Active'),
-(7, 4, '	Southern Ostrobothnia', 'Southern Ostrobothnia is one of the 19 regions of Finland. SeinÃ¤joki is the regional centre and by far the largest city in the area.', 'Active'),
-(8, 1, 'Andhra Pradesh', 'Andhra Pradesh is a state bordering Indias southeastern coast. Tropical forests, rivers, hills and caves make it a popular ecotourism destination. Beaches line the Bay of Bengal, offering spots for swimming and surfing. Major cultural landmarks include ', 'Active'),
-(9, 1, 'Arunachal Pradesh', ' it holds the most north-eastern position among the states in the north-east region of India.', 'Active'),
-(10, 1, 'Assam', 'Assam is a state in Northeast India. Located south of the eastern Himalayas, Assam comprises the Brahmaputra Valley and the Barak Valley along with the Karbi Anglong and Dima Hasao districts with an area of 30,285 square miles. ', 'Active'),
-(11, 1, 'Coventry', 'Coventry is a city in central England, known for its medieval Coventry cathedral.', 'Active'),
-(12, 1, 'Goa', 'Goa is a state in western India with coastlines stretching along the Arabian Sea. Its long history as a Portuguese colony prior to 1961 is evident in its preserved', 'Active'),
-(13, 1, 'Cumbria', '', 'Active'),
-(28, 1, 'Sikkim', 'Sikkim is a small state in northwest India, bordered by Bhutan, Tibet and Nepal. Part of the Himalayas, the area has a dramatic landscape including Indiaâ€™s highest mountain, 8,586m Kanchenjunga. Sikkim is also home to glaciers, alpine meadows and thousands of varieties of wildflowers. Steep paths lead to hilltop Buddhist monasteries such as Pemayangtse, which dates to the early 1700s.', 'Active'),
-(29, 1, 'Tamil Nadu', 'Tamil Nadu, a southeast Indian state, is famed for its Dravidian-style Hindu temples. In Madurai, Meenakshi Amman Temple has high gopurams (tower gateways) ornamented with colorful figures. Tamil Nadu, a southeast Indian state, is famed for its Dravidian-style Hindu temples. In Madurai, Meenakshi Amman Temple has high gopurams (tower gateways) ornamented with colorful figures. ', 'Active'),
-(30, 1, 'Telangana', 'Telangana is a state in South India and one of the 29 states in India. It was formed on 2 June 2014 with the city of Hyderabad as its capital.', 'Active'),
-(31, 1, '	Tripura', ' is a state in Northeast India. The third-smallest state in the country, it covers 10,491 kmÂ² and is bordered by Bangladesh to the north, south, and west, and the Indian states of Assam and Mizoram to the east', 'Active'),
-(32, 1, 'Uttar Pradesh', 'Uttar Pradesh is a state in northern India. Its city of Agra is home to the iconic Taj Mahal monument, a colossal, domed, white-marble mausoleum honoring the wife of Mughal ruler Shah Jahan. Named Mumtaz Mahal, she died in childbirth in 1631. Nearby are the 20m-high, red-brick walls of Agra Fort, a Mughal fortress and palace dating to the 16th and 17th centuries.', 'Active'),
-(33, 1, 'Uttarakhand', 'Uttarakhand, a state in northern India crossed by the Himalayas, is known for its Hindu pilgrimage sites', 'Active'),
-(34, 1, 'West Bengal', 'West Bengal is a state in eastern India, between the Himalayas and the Bay of Bengal. Its capital, Kolkata retains architectural and cultural remnants of its past as an East India Company trading post and the capital of the British Raj.', 'Active'),
-(35, 1, 'Bihar', 'Bihar is a state in East India, bordering Nepal. It is divided by the River Ganges, which floods its fertile plains', 'Active'),
-(36, 1, 'Gujarath', 'Gujarat, Indias westernmost state, has varied terrain and numerous sacred sites.', 'Active'),
-(37, 2, 'Alabama', 'Alabama is a southeastern U.S. state thats home to significant landmarks from the American Civil Rights Movement.', 'Active'),
-(38, 2, 'Alaska', 'Alaska, northwest of Canada, is the largest and most sparsely populated U.S. state.', 'Active'),
-(39, 2, 'Arizona', 'Arizona, a southwestern U.S. state, is best known for its reliably sunny weather and as home to the Grand Canyon, the mile-deep chasm carved by the Colorado River', 'Active'),
-(40, 2, 'Arkansas', 'Arkansas is a southeastern U.S. state bordering the Mississippi River. ', 'Active'),
-(41, 2, 'California', 'California, a western U.S. state, stretches from the Mexican border along the Pacific for nearly 900 miles.', 'Active'),
-(42, 2, 'Colorado', 'Colorado, a western U.S. state, is known for its geographic diversity, with snow-covered mountains, arid desert lands and river canyons. ', 'Active'),
-(43, 2, 'Connecticut', 'Connecticut is a southern New England state thats a mix of coastal cities and rural areas dotted with small towns', 'Active'),
-(44, 3, 'Moscow Oblast', 'Moscow Oblast, or Podmoskovye, is a federal subject of Russia. Its area, at 45,900 square kilometers, is relatively small compared to other federal subjects, but it is one of the most densely populated', 'Active'),
-(45, 3, 'Murmansk Oblast', 'Murmansk Oblast is a federal subject of Russia, located in the northwestern part of Russia', 'Active'),
-(46, 3, 'Nenets Autonomous Okrug', 'Nenets Autonomous Okrug is a federal subject of Russia. Its administrative center is the town of NaryanMar.', 'Active'),
-(47, 3, 'Nizhny Novgorod Oblast', ' colloquially shortened to Nizhny, is, with a population of 1,250,619', 'Active'),
-(48, 5, 'Anhui', 'Located across the basins of the Yangtze River and the Huai River, it borders Jiangsu to the east, Zhejiang to the southeast, Jiangxi to the south, Hubei to the southwest,', 'Active'),
-(49, 5, 'Fujian', 'Fujian is a southeastern Chinese province known for its mountains and coastal cities.', 'Active'),
-(50, 5, 'Gansu', 'Gansu is a province of the Peoples Republic of China, located in the northwest of the country', 'Active'),
-(51, 5, 'Guangdong', ' a coastal province of southeast China, borders Hong Kong and Macau. Its capital, Guangzhou', 'Active'),
-(52, 5, 'Guizhou', 'Guizhou is a mountainous province in southwest China.', 'Active'),
-(53, 5, 'Hainan', 'Hainan, an island province of China', 'Active'),
-(54, 6, 'BadenWurttemberg', 'Baden-WÃ¼rttemberg is a state in southwest Germany bordering France and Switzerland.', 'Active'),
-(55, 6, 'Bavaria', '', 'Active'),
-(56, 7, 'Berlin', '', 'Active'),
-(57, 6, 'Brandenburg', '', 'Active'),
-(58, 6, 'Bremen', '', 'Active'),
-(59, 6, 'Hamburg', '', 'Active'),
-(60, 6, 'Hesse', '', 'Active'),
-(61, 1, 'Delhi', '', 'Active'),
-(62, 1, 'Pondicherry', '', 'Active'),
-(63, 1, 'Meghalaya', 'Meghalaya', 'Active'),
-(64, 0, '', '', 'Active'),
-(65, 1, 'Manipur', 'Manipur', 'Active');
+(3, '4', 'Kainuu', 'Kainuu is one of the 19 Regions of Finland . There are 18 regions in mainland Finland, and the autonomous Ã…land Islands. Kainuu borders the regions of Northern Ostrobothnia, North Karelia and Northern Savonia. In the east it also borders Russia.', 'Active'),
+(4, '3', 'North Karelia', 'North Karelia is a region in eastern Finland. It borders the regions of Kainuu, Northern Savonia, Southern Savonia and South Karelia, as well as Russia. ', 'Active'),
+(5, '4', 'Northern Savonia', 'Northern Savonia is a region in eastern Finland. Kuopio is the largest city in the region. ', 'Active'),
+(6, '4', 'Southern Savonia', 'Southern Savonia is a region in the south-east of Finland. It borders on the regions Northern Savonia, North Karelia, South Karelia, Kymenlaakso, PÃ¤ijÃ¤nne Tavastia, and Central Finland. ', 'Active'),
+(7, '4', '	Southern Ostrobothnia', 'Southern Ostrobothnia is one of the 19 regions of Finland. SeinÃ¤joki is the regional centre and by far the largest city in the area.', 'Active'),
+(8, '1', 'Birmingham', 'city', 'Active'),
+(9, '1', 'Cumbria', 'Cumbria city', 'Active'),
+(10, '1', 'Assam', 'Assam is a state in Northeast India. Located south of the eastern Himalayas, Assam comprises the Brahmaputra Valley and the Barak Valley along with the Karbi Anglong and Dima Hasao districts with an area of 30,285 square miles. ', 'Active'),
+(11, '1', 'Coventry', 'Coventry is a city in central England, known for its medieval Coventry cathedral.', 'Active'),
+(12, '1', 'Liverpool', 'Merseyside', 'Active'),
+(13, '1', 'Cumbria', '', 'Active'),
+(28, '1', 'Rugby', 'Rugby city.', 'Active'),
+(30, '1', 'Leeds', 'City', 'Active'),
+(31, '1', ' Stoke-on-trent', 'Stoke', 'Active'),
+(37, '2', 'Alabama', 'Alabama is a southeastern U.S. state thats home to significant landmarks from the American Civil Rights Movement.', 'Active'),
+(38, '2', 'Alaska', 'Alaska, northwest of Canada, is the largest and most sparsely populated U.S. state.', 'Active'),
+(39, '2', 'Arizona', 'Arizona, a southwestern U.S. state, is best known for its reliably sunny weather and as home to the Grand Canyon, the mile-deep chasm carved by the Colorado River', 'Active'),
+(40, '2', 'Arkansas', 'Arkansas is a southeastern U.S. state bordering the Mississippi River. ', 'Active'),
+(41, '2', 'California', 'California, a western U.S. state, stretches from the Mexican border along the Pacific for nearly 900 miles.', 'Active'),
+(42, '2', 'Colorado', 'Colorado, a western U.S. state, is known for its geographic diversity, with snow-covered mountains, arid desert lands and river canyons. ', 'Active'),
+(43, '2', 'Connecticut', 'Connecticut is a southern New England state thats a mix of coastal cities and rural areas dotted with small towns', 'Active'),
+(44, '3', 'Moscow Oblast', 'Moscow Oblast, or Podmoskovye, is a federal subject of Russia. Its area, at 45,900 square kilometers, is relatively small compared to other federal subjects, but it is one of the most densely populated', 'Active'),
+(45, '3', 'Murmansk Oblast', 'Murmansk Oblast is a federal subject of Russia, located in the northwestern part of Russia', 'Active'),
+(46, '3', 'Nenets Autonomous Okrug', 'Nenets Autonomous Okrug is a federal subject of Russia. Its administrative center is the town of NaryanMar.', 'Active'),
+(47, '3', 'Nizhny Novgorod Oblast', ' colloquially shortened to Nizhny, is, with a population of 1,250,619', 'Active'),
+(48, '5', 'Anhui', 'Located across the basins of the Yangtze River and the Huai River, it borders Jiangsu to the east, Zhejiang to the southeast, Jiangxi to the south, Hubei to the southwest,', 'Active'),
+(49, '5', 'Fujian', 'Fujian is a southeastern Chinese province known for its mountains and coastal cities.', 'Active'),
+(50, '5', 'Gansu', 'Gansu is a province of the Peoples Republic of China, located in the northwest of the country', 'Active'),
+(51, '5', 'Guangdong', ' a coastal province of southeast China, borders Hong Kong and Macau. Its capital, Guangzhou', 'Active'),
+(52, '5', 'Guizhou', 'Guizhou is a mountainous province in southwest China.', 'Active'),
+(53, '5', 'Hainan', 'Hainan, an island province of China', 'Active'),
+(54, '6', 'BadenWurttemberg', 'Baden-WÃ¼rttemberg is a state in southwest Germany bordering France and Switzerland.', 'Active'),
+(55, '6', 'Bavaria', '', 'Active'),
+(56, '7', 'Berlin', '', 'Active'),
+(57, '6', 'Brandenburg', '', 'Active'),
+(58, '6', 'Bremen', '', 'Active'),
+(59, '6', 'Hamburg', '', 'Active'),
+(60, '6', 'Hesse', '', 'Active'),
+(63, '1', 'Bath', 'Bath City', 'Active'),
+(64, '0', '', '', 'Active'),
+(65, '1', 'Manipur', 'Manipur', 'Active');
 
 -- --------------------------------------------------------
 
@@ -768,7 +774,7 @@ CREATE TABLE `variety` (
 --
 
 INSERT INTO `variety` (`variety_id`, `category_id`, `produce_id`, `variety`, `description`, `img`, `status`) VALUES
-(1, 1, 1, 'Dwarf Cavendish', 'Dwarf Cavendish leaves are broad with short petioles. Its shortness makes it stable, wind resistant, and easier to manage. This, in addition to its fast growth rate, makes it ideal for plantation cultivation, An easily recognizable characteristic of this cultivar is that the male bracts and flowers are not shed.\r\nThe fruits of the Dwarf Cavendish cultivar range from about 15 to 25 cm in length, and are thin skinned. Each plant can bear up to 90 fingers.', '8569dwarfcavendish.png', 'Active'),
+(1, 1, 1, 'Dwarf Cavendish', 'Dwarf Cavendish leaves are broad with short petioles. Its shortness makes it stable, wind resistant, and easier to manage. This, in addition to its fast growth rate, makes it ideal for plantation cultivation.An easily recognizable characteristic of this cultivar is that the male bracts and flowers are not shed.\r\nThe fruits of the Dwarf Cavendish cultivar range from about 15 to 25 cm in length, and are thin skinned. Each plant can bear up to 90 fingers.', '8569dwarfcavendish.png', 'Active'),
 (2, 1, 1, 'Karpuravalli', 'It is a popular variety grown for table purpose in medium rich soils. Its commercial cultivation is spread over in Central and Southern districts of Tamil Nadu and Kerala. In Bihar, cultivation is in patches under the name Kanthali. Karpuravalli is a tall, robust plant well suited to marginal lands and soils, produced under low input conditions. It is also the sweetest among Indian bananas. Karpuravalli is occasionally seeded depending on the seasonal variability. Its ash coated golden yellow and sweet fruits have good keeping quality. Karpuravalli is highly susceptible to wilt disease, tolerant to leaf spot disease and well suited for drought, salt affected areas and for low input conditions.', '6943karpuravalli.jpg', 'Active'),
 (3, 1, 1, 'Kadali', 'Kadali is a small and sweet fruited variety of banana. the variety is mainly grown for offerings in temple. The variety is known by names like Ambalakadali, Nivedya kadali etc. The fruits are small but sweet. The average bunch weight is 8 to 10 kg. And, the market for the fruit is always assured.', '11884kathali.png', 'Active'),
 (4, 1, 1, 'Monthan', 'It is a widely cultivated variety for processing. Monthan is a fairly tall and robust plant bearing bunches of 18 to 20 kg after 12 months. Fruits are bold, stocky, knobbed and pale green in colour. The skin is usually green. The new prolific Monthan type clones of economic value namely  Kanchi Vazhai and  Chakkia are recently becoming popular in Tamil Nadu. Apart from its culinary use of fruits, pseudostem core is a highly relished vegetable with many medicinal properties. Monthan is also cultivated for production of leaves in Trichy and Tanjore districts of Tamil Nadu. It has many desirable qualities like immunity to Banana Bunchy Top Virus diseases, salt tolerance and normal bunch mass even under marginal condition, but it is highly susceptible to Fusarium wilt disease.', '23605monthan.jpg', 'Active'),
@@ -791,7 +797,6 @@ INSERT INTO `variety` (`variety_id`, `category_id`, `produce_id`, `variety`, `de
 (21, 1, 2, 'Royal Gala', 'Gala apples are vertically striped or mottled, overall orange in colour. Gala apples are sweet, fine textured, and aromatic,and can be added to salads or cooked, and are especially suitable for creating sauces.', '3115royal gala.jpg', 'Active'),
 (22, 1, 2, 'Granny Smith', 'The Granny Smith is a tip bearing apple cultivar, which originated in Australia in 1868. It is named after Maria Ann Smith, who propagated the cultivar from a chance seedling. The tree is thought to be a hybrid of Malus sylvestris, the European Wild Apple, with the domestic apple M. domestica as the polleniser. The fruit has hard, light green skin and a crisp, juicy flesh.', '30856grannysmith.jpg', 'Active'),
 (23, 1, 2, 'Pink Lady', 'It has a enlongated and assymetrical shape. The skin is a vivid green covered in a pinkish blush which becomes deeper shade of red when exposed to more sun. It ha scrunchy texture and a tart taste with a sweet finish.', '29217pink lady.jpg', 'Active'),
-(24, 1, 3, 'Allahabad Safeda', 'The most famous variety of Allahabad, it has acquired large variations due to seed propagation.  The fruits are large in size, round in shape, skin smooth and yellowish white.  The flesh is white, firm, soft having pleasant flavour, high TSS and vitamin C content.  The seeds are numerous, bold and hard.  The trees are tall with profuse branching and broad crown.  It can withstand drought conditions. ', '22086Allahabad Safeda.jpg', 'Active'),
 (25, 1, 3, 'Arka Mridula', ' This is a seedling selection of variety Allahabad Safeda.  Its medium sized fruits are of excellent quality with high TSS.  The white pulp has only few soft seeds.  The plants are of medium vigour but high yielding. ', '16391Arka Mridula.png', 'Active'),
 (26, 1, 3, 'Banarasi', ' The variety attains a height of 4.0 to 5.5 m with a broad crown and fruits are round, light-yellow in colour. It is mainly cultivated for table purpose.', '5428Banarasi.jpg', 'Active'),
 (27, 1, 3, 'Chittidar', 'The variety is very popular in western Uttar Pradesh.  The fruits are characterized by numerous red dots on the skin, high sweetness, and small and soft seeds.  It is otherwise similar to Allahabad safeda fruits in size, shape and pulp.  It has higher TSS content than Allahabad Safeda and Lucknow 49 but lower vitamin C content.  The tree characters resemble to those of Allahabad Safeda. ', '3933Chittidar.jpg', 'Active'),
@@ -914,10 +919,10 @@ INSERT INTO `variety` (`variety_id`, `category_id`, `produce_id`, `variety`, `de
 (144, 1, 175, 'Eureka Sweet Lemon', 'Sweet lemon or sweet lime refers to many citrus hybrids that contain low acid pulp and juice, and are identical to the common lemon or lime or just similar to them.', '2347eureka.jpg', 'Active'),
 (145, 1, 175, 'Sevilla Sweet Lemon', 'Sweet lemon or sweet lime refers to many citrus hybrids that contain low acid pulp and juice, and are identical to the common lemon or lime or just similar to them.', '14113sevilla.jpg', 'Active'),
 (146, 1, 175, 'Malta Sweet Lemon', 'Sweet lemon or sweet lime refers to many citrus hybrids that contain low acid pulp and juice, and are identical to the common lemon or lime or just similar to them.', '3335malta.png', 'Active'),
-(147, 1, 175, 'Kari Sweet Lemon', 'Sweet lemon or sweet lime refers to many citrus hybrids that contain low acid pulp and juice, and are identical to the common lemon or lime or just similar to them.', '9309kari.jpg', 'Active');
-INSERT INTO `variety` (`variety_id`, `category_id`, `produce_id`, `variety`, `description`, `img`, `status`) VALUES
+(147, 1, 175, 'Kari Sweet Lemon', 'Sweet lemon or sweet lime refers to many citrus hybrids that contain low acid pulp and juice, and are identical to the common lemon or lime or just similar to them.', '9309kari.jpg', 'Active'),
 (148, 1, 176, 'Souey Tung', 'This is the first variety of lychee to be cultivated in Australia. It is becoming more readily available.\r\nAvailable from October to November.', '29347SoueyTung.jpg', 'Active'),
-(149, 1, 176, 'Wai Chee', 'Fruit has a deep red colour with a smooth thin skin. The fruit is round in shape and the size will vary as the fruit matures. \r\nThe flesh is sweet and juicy with a good flavour. A late fruiting variety that grows in South East Qld and NSW.', '2256WaiChee.jpg', 'Active'),
+(149, 1, 176, 'Wai Chee', 'Fruit has a deep red colour with a smooth thin skin. The fruit is round in shape and the size will vary as the fruit matures. \r\nThe flesh is sweet and juicy with a good flavour. A late fruiting variety that grows in South East Qld and NSW.', '2256WaiChee.jpg', 'Active');
+INSERT INTO `variety` (`variety_id`, `category_id`, `produce_id`, `variety`, `description`, `img`, `status`) VALUES
 (150, 1, 176, 'Kaimana', 'A relatively new variety that is in limited supply. It is a large red fruit with a small seed.\r\nAvailable from November to December.', '21454Kaimana.jpg', 'Active'),
 (151, 1, 176, 'Salathiel', 'Developed in Australia, they are bright red with a smooth skin but are small with a very small seed.\r\nAvailable from December to January.', '25084salathiel.jpg', 'Active'),
 (152, 1, 176, 'Tai So', 'A pretty red colour when ripe, they are a lovely eating fruit with a similar taste to B3.\r\nAvailable from mid November to mid January.', '24282TaiSo.jpg', 'Active'),
@@ -1124,10 +1129,10 @@ INSERT INTO `variety` (`variety_id`, `category_id`, `produce_id`, `variety`, `de
 (360, 5, 144, 'Enoki', 'BunapiA mushroom is the fleshy, spore bearing fruiting body of a fungus, typically produced above ground on soil or on its food source.', '30983enoki.jpg', 'Active'),
 (361, 5, 144, 'Oyster', 'BunapiA mushroom is the fleshy, spore bearing fruiting body of a fungus, typically produced above ground on soil or on its food source.', '28765oyster.jpg', 'Active'),
 (362, 5, 144, 'Portobello', 'BunapiA mushroom is the fleshy, spore bearing fruiting body of a fungus, typically produced above ground on soil or on its food source.', '7843portobello.jpg', 'Active'),
-(363, 5, 144, 'Shimeji', 'BunapiA mushroom is the fleshy, spore bearing fruiting body of a fungus, typically produced above ground on soil or on its food source.', '14790shimeji.jpg', 'Active');
-INSERT INTO `variety` (`variety_id`, `category_id`, `produce_id`, `variety`, `description`, `img`, `status`) VALUES
+(363, 5, 144, 'Shimeji', 'BunapiA mushroom is the fleshy, spore bearing fruiting body of a fungus, typically produced above ground on soil or on its food source.', '14790shimeji.jpg', 'Active'),
 (364, 5, 145, 'Green Asparagus', 'Asparagus officinalis, is an herbaceous perennial plant in the family Asparagaceae which is grown for its young shoots, or spears, which are eaten as a vegetable. ', '25780green asparagus.jpg', 'Active'),
-(365, 5, 145, 'Garden Asparagus', 'Asparagus officinalis, is an herbaceous perennial plant in the family Asparagaceae which is grown for its young shoots, or spears, which are eaten as a vegetable. ', '11346garden asaparagus.jpg', 'Active'),
+(365, 5, 145, 'Garden Asparagus', 'Asparagus officinalis, is an herbaceous perennial plant in the family Asparagaceae which is grown for its young shoots, or spears, which are eaten as a vegetable. ', '11346garden asaparagus.jpg', 'Active');
+INSERT INTO `variety` (`variety_id`, `category_id`, `produce_id`, `variety`, `description`, `img`, `status`) VALUES
 (366, 5, 146, 'Pusa Chandrima', 'Turnip is a vegetable', '6176pusa chandrima.jpg', 'Active'),
 (367, 5, 146, 'Pusa Kanchan', 'Turnip is a vegetable', '15262pusa kanchan.jpg', 'Active'),
 (368, 5, 146, 'Pusa Sweti', 'Turnip is a vegetable', '5708pusa sweti.jpg', 'Active'),
@@ -1423,16 +1428,6 @@ CREATE TABLE `worker` (
   `status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `worker`
---
-
-INSERT INTO `worker` (`worker_id`, `name`, `address`, `state_id`, `city_id`, `country_id`, `postcode`, `work_profile`, `biodata`, `contactno`, `date_of_birth`, `login_id`, `password`, `expected_salary`, `status`) VALUES
-(1, 'Mahesh', 'Karinja House, Ednad Post', '16', '16', '1', '765990', 'Harvesting Coconuts', '25372Final Resume.docx', '8748922442', '1989-12-24', 'atkison@gmail.com', 'workmahesh', 800.00, 'Active'),
-(2, 'Chandan', 'Faridabad, Room no.09', '17', '189', '1', '463879', 'Wood cutting', '24142Final Resume.docx', '8748222273', '1989-08-22', 'rdsr2s94@gmail.com', 'workchandan', 700.00, 'Active'),
-(3, 'Raj kirana', 'apes court, enry road', '8', '54', '1', '5896741', 'Hello, This i srec', '1018215814Synopsissopi.docx', '080256789', '1998-05-04', 'rajkiran23@gmail.com', 'q1w2e3r4', 12000.00, 'Active'),
-(4, 'Brijesh', 'apes court, enry road', '8', '54', '1', '5896741', 'Rent worker', '1018215814Synopsissopi.docx', '080256789', '1998-05-04', 'rajkiran23@gmail.com', 'q1w2e3r4', 12000.00, 'Active');
-
 -- --------------------------------------------------------
 
 --
@@ -1446,9 +1441,9 @@ CREATE TABLE `worker_request` (
   `from_date` date NOT NULL,
   `to_date` date NOT NULL,
   `task` text NOT NULL,
-  `country_id` int(10) NOT NULL,
-  `state_id` int(10) NOT NULL,
-  `city_id` int(10) NOT NULL,
+  `country_id` varchar(20) NOT NULL,
+  `state_id` varchar(20) NOT NULL,
+  `city_id` varchar(20) NOT NULL,
   `salary` float(10,2) NOT NULL,
   `salary_type` varchar(20) NOT NULL,
   `seller_status` varchar(20) NOT NULL,
@@ -1462,75 +1457,10 @@ CREATE TABLE `worker_request` (
 --
 
 INSERT INTO `worker_request` (`worker_request_id`, `worker_id`, `seller_id`, `from_date`, `to_date`, `task`, `country_id`, `state_id`, `city_id`, `salary`, `salary_type`, `seller_status`, `worker_status`, `seller_comment`, `worker_comment`) VALUES
-(1, 1, 1, '2022-03-03', '2022-03-05', 'Harvest Produces', 1, 18, 17, 600.00, 'Wage', 'Approved', 'Approved', '11-Mar-2022 09:37:30 - \r\n Supplies will be provided', '02-Mar-2022 03:09:18 - test comment \r\n 02-Mar-2022 03:07:51 - Thank You Again \r\n 02-Mar-2022 03:07:23 - Work time: 9 AM to 3 PM \r\n 02-Mar-2022 03:05:12 - Thank You For Providing Supplies.. \r\n '),
-(2, 1, 2, '2022-03-11', '2022-03-14', 'Harvesting & Composting', 1, 9, 7, 750.00, 'Wage', 'Approved', 'Rejected', 'Machinery provided', '08-Mar-2022 09:49:44 - Location is inconvenient \r\n '),
-(3, 1, 1, '2022-03-11', '2022-03-14', 'Fertilizing', 1, 11, 10, 890.00, 'Wage', 'Approved', 'Rejected', 'testing', '02-Mar-2022 09:16:13 - Thank you for the opportunity \r\n '),
-(4, 1, 2, '2022-03-11', '2022-03-14', 'Composting and manure', 2, 39, 35, 650.00, 'Salary', 'Approved', 'Rejected', 'testing comment', '');
-
-
-
---
--- Table structure for table `tbl_payment`
---
-
-CREATE TABLE `tbl_payment` (
-  `id` int(11) NOT NULL,
-  `order_hash` varchar(255) NOT NULL,
-  `payer_email` varchar(100) NOT NULL,
-  `amount` double(10,2) NOT NULL,
-  `currency` varchar(25) NOT NULL,
-  `payment_type` varchar(25) NOT NULL,
-  `order_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `order_status` varchar(25) NOT NULL,
-  `notes` text NOT NULL,
-  `name` varchar(25) NOT NULL,
-  `address` varchar(255) NOT NULL,
-  `country` varchar(25) NOT NULL,
-  `postal_code` varchar(25) NOT NULL,
-  `stripe_payment_intent_id` varchar(255) NOT NULL,
-  `payment_status` varchar(25) NOT NULL,
-  `stripe_payment_status` varchar(25) NOT NULL,
-  `stripe_payment_response` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-
--- Table structure for table `transactions`
---
-
-CREATE TABLE `transactions` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `customer_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `customer_email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `item_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `item_number` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `item_price` float(10,2) NOT NULL,
-  `item_price_currency` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  `paid_amount` float(10,2) NOT NULL,
-  `paid_amount_currency` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  `txn_id` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `payment_status` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
-  `created` datetime NOT NULL,
-  `modified` datetime NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
--- Indexes for dumped tables
---
-
---
--- Indexes for table `tbl_payment`
---
-ALTER TABLE `tbl_payment`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `tbl_payment`
---
-ALTER TABLE `tbl_payment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+(1, 1, 1, '2022-03-03', '2022-03-05', 'Harvest Produces', '1', '18', '17', 600.00, 'Wage', 'Approved', 'Approved', '11-Mar-2022 09:37:30 - \r\n Supplies will be provided', '02-Mar-2022 03:09:18 - test comment \r\n 02-Mar-2022 03:07:51 - Thank You Again \r\n 02-Mar-2022 03:07:23 - Work time: 9 AM to 3 PM \r\n 02-Mar-2022 03:05:12 - Thank You For Providing Supplies.. \r\n '),
+(2, 1, 2, '2022-03-11', '2022-03-14', 'Harvesting & Composting', '1', '9', '7', 750.00, 'Wage', 'Approved', 'Rejected', 'Machinery provided', '08-Mar-2022 09:49:44 - Location is inconvenient \r\n '),
+(3, 1, 1, '2022-03-11', '2022-03-14', 'Fertilizing', '1', '11', '10', 890.00, 'Wage', 'Approved', 'Rejected', 'testing', '02-Mar-2022 09:16:13 - Thank you for the opportunity \r\n '),
+(4, 1, 2, '2022-03-11', '2022-03-14', 'Composting and manure', '2', '39', '35', 650.00, 'Salary', 'Approved', 'Rejected', 'testing comment', '');
 
 --
 -- Indexes for dumped tables
@@ -1678,7 +1608,7 @@ ALTER TABLE `country`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `produce`
@@ -1690,19 +1620,19 @@ ALTER TABLE `produce`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `product_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=234;
 
 --
 -- AUTO_INCREMENT for table `product_purchase_bill`
 --
 ALTER TABLE `product_purchase_bill`
-  MODIFY `product_purchase_bill_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `product_purchase_bill_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `product_purchase_record`
 --
 ALTER TABLE `product_purchase_record`
-  MODIFY `purchase_record_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
+  MODIFY `purchase_record_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
 -- AUTO_INCREMENT for table `purchase_order`
@@ -1720,7 +1650,7 @@ ALTER TABLE `purchase_order_bill`
 -- AUTO_INCREMENT for table `purchase_request`
 --
 ALTER TABLE `purchase_request`
-  MODIFY `purchase_request_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `purchase_request_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `seller`
@@ -1732,7 +1662,7 @@ ALTER TABLE `seller`
 -- AUTO_INCREMENT for table `selling_product`
 --
 ALTER TABLE `selling_product`
-  MODIFY `selling_prod_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `selling_prod_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `state`

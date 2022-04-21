@@ -98,7 +98,7 @@ if(isset($_SESSION['sellerid']))
 	</div>
 	
 	<div class="col-md-6 form-group">
-	State <font color="#FF0000"> *</font>
+	State <font color="#8D0801"> *</font>
 	  <span id='loadstate'><select name="state" id="state" class="form-control">
                                    <option value="">Select</option>
                                   <?php
@@ -120,7 +120,7 @@ if(isset($_SESSION['sellerid']))
 	</div>
 	
 	<div class="col-md-6 form-group">
-	City <font color="#FF0000"> *</font>
+	City <font color="#8D0801"> *</font>
 	  <span id='loadcity'><select name="city" id="city" class="form-control">
                                    <option value="">Select</option>
                                   <?php
@@ -143,41 +143,41 @@ if(isset($_SESSION['sellerid']))
 	
 	
 	<div class="col-md-6 form-group">
-	Pincode <font color="#FF0000"> *</font>
-	  <input type="number" name="pincode" id="postcode" value="<?php echo $rsedit['postcode']; ?>" class="form-control">
+	Poscode <font color="#FF0000"> *</font>
+	<input type="text" pattern="[0-9][0-9]{3}\s?[a-zA-Z{2} title="Five digit post code" value="<?php echo $rsedit['postcode']; ?>" class="form-control">
 	</div>
 	
 	<div class="col-md-6 form-group">
-	Contact Number <font color="#FF0000"> *</font>
+	Contact Number <font color="#8D0801"> *</font>
 	  <input type="number" name="contactnumber" id="contactnumber" value="<?php echo $rsedit['contact_number']; ?>" class="form-control">
 	</div>
 	
 	<div class="col-md-6 form-group">
-	Mobile Number <font color="#FF0000"> *</font>
+	Mobile Number <font color="#8D0801"> *</font>
 	  <input type="number" name="mbnumber" id="mbnumber" value="<?php echo $rsedit['mobile_no']; ?>" class="form-control">
 	</div>
 		
 
 	<div class="col-md-6 form-group">
-	Bank Name  <font color="#FF0000">*</font>
+	Bank Name  <font color="#8D0801">*</font>
 	  <input type="text" name="bankname" id="bankname" value="<?php echo $rsedit['bank_name']; ?>" autofocus class="form-control" >
 	</div>	
 	
 	
 	<div class="col-md-6 form-group">
-	Branch  <font color="#FF0000">*</font>
+	Branch  <font color="#8D0801">*</font>
 	  <input type="text" name="branch" id="branch" value="<?php echo $rsedit['bank_branch']; ?>" autofocus class="form-control" >
 	</div>	
 	
 	
 	<div class="col-md-6 form-group">
-	IFSC Code  <font color="#FF0000">*</font>
-	  <input type="text" name="ifsccode" id="ifsccode" value="<?php echo $rsedit['bank_IFSC']; ?>" autofocus class="form-control" >
+	SORT Code  <font color="#8d0801">*</font>
+	  <input type="number" name="sortcode" id="sortcode" value="<?php echo $rsedit['bank_SORTCODE']; ?>" autofocus class="form-control" >
 	</div>	
 	
 	
 	<div class="col-md-6 form-group">
-	Bank Account Number  <font color="#FF0000">*</font>
+	Bank Account Number  <font color="#8D0801">*</font>
 	  <input type="text" name="bankacnumber" id="bankacnumber" value="<?php echo $rsedit['bank_acno']; ?>" autofocus class="form-control" >
 	</div>	
 

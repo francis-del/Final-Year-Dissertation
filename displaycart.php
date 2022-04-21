@@ -1,6 +1,11 @@
 <?php 
 include("header.php");
 include("dbconnection.php");
+include("payment-status.php");
+include("payment_init.php");
+include("success.php");
+include("config.php");
+
 if(!isset($_SESSION['customerid']) && !isset($_SESSION['sellerid']))
 {
 	echo "<script>window.location='customerloginpanel.php'; </script>";
@@ -129,10 +134,7 @@ if(isset($_GET['prodid']))
   
 <?php
 include("footer.php");
-include("payment-status.php");
-include("payment_init.php");
-include("success.php");
-include("config.php");
+
 ?>
 <script type="application/javascript">
 function changecost(totqty,purchaseid,divid)

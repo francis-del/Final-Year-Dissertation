@@ -5,15 +5,15 @@ use PHPMailer\PHPMailer\Exception;
 function sendmail($tomail, $totmailname , $subject, $message)
 {
 	$loginid 	= "adinducon@gmail.com";
-	$password 	= "Q1w2e3r4/";
+	$password 	= "";
 	$smtpserver = "smtp.gmail.com";
 	$smtpport 	= 587;
 	$mailsender = "Farmex";
 	$companyname= "Farmex";
-	$facebook = "https://www.facebook.com/agribuzz";
-	$twitter = "https://www.twitter.com/agribuzz";
-	$youtube = "https://www.youtube.com/agribuzz";
-	$linkedin = "https://www.linkedin.com/agribuzz";
+	$facebook = "https://www.facebook.com/farmex";
+	$twitter = "https://www.twitter.com/farmex";
+	$youtube = "https://www.youtube.com/farmex";
+	$linkedin = "https://www.linkedin.com/farmex";
 	$companyaddress  = "Farmex";
 	$contactno = "07869144440";
 	$url = "www.farmex.com";

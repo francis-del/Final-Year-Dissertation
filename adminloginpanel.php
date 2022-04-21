@@ -71,7 +71,7 @@ $_SESSION['randnumber'] = $randnumber;
               <div class="col-md-8 d-flex align-items-stretch">
                 <div class="icon-box" data-aos="zoom-in" data-aos-delay="100" style="width: 100%;text-align: left;">
 <form method="post" action="" name="frmadminlogin" onSubmit="return validateadminlogin()">
-                  <h4>Login Page</h4>
+                  <!-- <h4>Login Page</h4> -->
 <input type="hidden" name="randnumber" value="<?php echo $randnumber; ?>" >
 
 <div class="form-group">
