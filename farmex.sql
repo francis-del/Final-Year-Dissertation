@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2022 at 07:19 AM
+-- Generation Time: Apr 21, 2022 at 10:40 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -458,9 +458,8 @@ INSERT INTO `product` (`product_id`, `seller_id`, `category_id`, `produce_id`, `
 (7, 1, 15, 215, 322, 'Green Tea', '25506black.jpg', '30771green.jpg', '26608', '4457mate.jpg', '6126', 0.00, 'Gram', 'High Quality green tea hand picked', '0000-00-00', 'Inactive'),
 (8, 1, 6, 70, 480, 'Cashew Nuts', '20894cashew nut.jpg', '5247cahsew nut.jpg', '7244', '25749', '27050', 126.00, 'Gram', 'High Quality.. hand picked', '2022-03-29', 'Active'),
 (10, 3, 1, 1, 4, 'A New Business Opportunity Every Day', '722282313unnamed.jpg', '', '', '', '', 2500.00, 'Gram', '', '2022-05-26', 'Active'),
-(40, 31, 13, 43, 131, 'Egg Plant', '55555eggplant1.jpg', '55555eggplant2.jpg', '55555eggplant3.jpg', '55555eggplant4.jpg', '55555eggplant5.jpg', 101.00, '500', 'The eggplant is a delicate, tropical perennial plant often cultivated as a tender or half-hardy annual in temperate climates.', '2022-04-20', 'Active'),
-(113, 37, 19, 53, 139, 'Long grain Rice', '66666rice1.jpg', '66666rice2.jpg', '66666rice3.jpg', '66666rice4.jpg', '66666rice5.jpg', 101.00, '500', 'Rice is the seed of the grass species Oryza sativa (Asian rice) or less commonly Oryza glaberrima (African rice).', '2022-04-20', 'Active'),
-(233, 73, 122, 105, 76, 'Mango', '25888alphonso.jpg', '31372alphonso.jpg', '22751alphonso.jpg', '4586alphonso.jpg', '10111alphonso.jpg', 100.00, '4500', 'Yellow British Mango', '2022-04-20', 'Active');
+(113, 31, 13, 43, 131, 'Egg Plant', '55555eggplant1.jpg', '55555eggplant2.jpg', '55555eggplant3.jpg', '55555eggplant4.jpg', '55555eggplant5.jpg', 101.00, '500', 'The eggplant is a delicate, tropical perennial plant often cultivated as a tender or half-hardy annual in temperate climates.', '2022-04-20', 'Active'),
+(117, 37, 13, 43, 131, 'Long grain rice', '66666rice1.jpg', '66666rice2.jpg', '66666rice3.jpg', '66666rice4.jpg', '66666rice5.jpg', 101.00, '500', 'British long grain rice', '2022-04-21', 'Active');
 
 -- --------------------------------------------------------
 
@@ -493,7 +492,10 @@ INSERT INTO `product_purchase_bill` (`product_purchase_bill_id`, `customer_id`, 
 (27, 6, 'UK', 'ENG', 'COV', 'Adindu', 'harper road, 1', 'cv12al', '07869144440', '0000-00-00 00:00:00', 'Active', 'Card', '', 0),
 (56, 9, '1', '11', '112', 'randy', '1 harper road', '', '07869144440', '2022-04-20 00:00:00', 'Active', 'Stripe', 'Card type -  , Card number -  ,  CVV number - ', 0),
 (57, 9, '1', '11', '112', 'randy', '1 harper road', '', '07869144440', '2022-04-20 00:00:00', 'Active', '', 'Card type -  , Card number -  ,  CVV number - ', 0),
-(58, 9, '1', '11', '112', 'randy', '1 harper road', '', '07869144440', '2022-04-20 00:00:00', 'Active', '', 'Card type -  , Card number -  ,  CVV number - ', 0);
+(58, 9, '1', '11', '112', 'randy', '1 harper road', '', '07869144440', '2022-04-20 00:00:00', 'Active', '', 'Card type -  , Card number -  ,  CVV number - ', 0),
+(59, 9, '1', '11', '112', 'randy', '1 harper road', '', '', '2022-04-20 00:00:00', 'Active', '', 'Card type -  , Card number -  ,  CVV number - ', 0),
+(60, 9, '1', '11', '112', 'randy', '1 harper road', '', '', '2022-04-20 00:00:00', 'Active', '', 'Card type -  , Card number -  ,  CVV number - ', 0),
+(61, 9, '1', '11', '112', 'randy', '1 harper road', '', '', '2022-04-20 00:00:00', 'Active', '', 'Card type -  , Card number -  ,  CVV number - ', 0);
 
 -- --------------------------------------------------------
 
@@ -532,7 +534,10 @@ INSERT INTO `product_purchase_record` (`purchase_record_id`, `product_purchase_b
 (88, 0, 7, 9, 1, 160.00, 'Active', 0),
 (89, 56, 2, 9, 1, 450.00, 'Active', 0),
 (90, 57, 4, 9, 1, 1080.00, 'Active', 0),
-(91, 58, 1, 9, 1, 300.00, 'Active', 0);
+(91, 58, 1, 9, 1, 300.00, 'Active', 0),
+(92, 59, 12, 9, 1, 899.99, 'Active', 0),
+(93, 60, 1, 9, 1, 300.00, 'Active', 0),
+(94, 61, 2, 9, 1, 450.00, 'Active', 0);
 
 -- --------------------------------------------------------
 
@@ -1626,13 +1631,13 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `product_purchase_bill`
 --
 ALTER TABLE `product_purchase_bill`
-  MODIFY `product_purchase_bill_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `product_purchase_bill_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT for table `product_purchase_record`
 --
 ALTER TABLE `product_purchase_record`
-  MODIFY `purchase_record_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+  MODIFY `purchase_record_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
 
 --
 -- AUTO_INCREMENT for table `purchase_order`

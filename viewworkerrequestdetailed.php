@@ -202,7 +202,7 @@ $rsworker = mysqli_fetch_array($qsqlworker);
 					          </tr>
 						      <tr>
 						        <th scope="row"><strong>Bonus</strong></th>
-						        <td><?php echo $rupeesymbol; ?>&nbsp;<?php echo  $rs['salary'] ."&nbsp;(".  $rs['salary_type'] .")"; ?></td>
+						        <td><?php echo $£; ?>&nbsp;<?php echo  $rs['salary'] ."&nbsp;(".  $rs['salary_type'] .")"; ?></td>
 					          </tr>
 						      <tr>
 						        <th scope="row" style="vertical-align: top;"><p><strong>Seller Feedback</strong></p>

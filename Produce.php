@@ -75,7 +75,7 @@ if(isset($_GET['editid']))
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
             <div class="info mt-4 ">
 			
-		<center><h4>Enter Produce Detail...</h4></center><hr>
+		<center><h4>Enter Produce Detail</h4></center><hr>
 
 <form  method="post" action="" enctype="multipart/form-data" name="frmproduce" onSubmit="return validateproduce()">
 <input type="hidden" name="randnumber" value="<?php echo $randnumber; ?>" >

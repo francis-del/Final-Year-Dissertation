@@ -1,10 +1,10 @@
 <?php 
 include("header.php");
 include("dbconnection.php");
-include("payment-status.php");
-include("payment_init.php");
-include("success.php");
-include("config.php");
+// include("payment-status.php");
+// include("payment_init.php");
+// include("success.php");
+// include("config.php");
 
 if(!isset($_SESSION['customerid']) && !isset($_SESSION['sellerid']))
 {

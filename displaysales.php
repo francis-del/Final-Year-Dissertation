@@ -11,7 +11,7 @@ include("header.php");
 			<br>
 			<br>
 			<br>
-          <h3>Market For Farmers</h3>
+          <h3>Market</h3>
         </div>
 
       </div>
@@ -34,7 +34,7 @@ if(isset($_GET['category_id']))
 else
 {
 ?>
-<li data-filter="*" class="filter-active">All items</li>
+<li data-filter="*" class="filter-active">Market Items</li>
 <?php
 }
 ?>
@@ -62,9 +62,9 @@ if(isset($_GET['category_id']))
             <div class="row">
               <div class="col-lg-3">
                 <div class="info">
-                  <h6>Choose country:</h6>
+                  <h6>Choose Your country</h6>
 <select name="country" id="country" onChange="loadstate(this.value)" autofocus class="search_categories form-control">
-        <option value="">Choose Country</option>
+        <option value="">Choose Your Country</option>
 		<?php
 		  $sql1 = "SELECT * FROM country where status='Active'";
 			$qsql1 =mysqli_query($con,$sql1);
@@ -85,7 +85,7 @@ if(isset($_GET['category_id']))
               </div>
               <div class="col-lg-3">
                 <div class="info w-100">
-                  <h6>Choose state</h6>
+                  <h6>Choose Your state</h6>
 <span id='loadstate'><select name="state"  autofocus class="search_categories form-control" onChange="loadcity(this.value)" ><option value="">Select State</option>
 <?php
 $sql2 = "SELECT * FROM state where status='Active' AND country_id='" . $_GET['country'] ."' ";
@@ -107,7 +107,7 @@ while($rssql2 = mysqli_fetch_array($qsql2))
               </div>
               <div class="col-lg-3">
                 <div class="info w-100">
-                  <h6>Choose city</h6>
+                  <h6>Choose Your City</h6>
 <span id='loadcity'><select name="city"  autofocus class="search_categories form-control"><option value="">Select City</option><?php
 $sql3 = "SELECT * FROM city where status='Active' AND state_id='$_GET[state]'";
 $qsql3 =mysqli_query($con,$sql3);
@@ -174,7 +174,7 @@ else
               <img src="imgproduct/<?php echo $rs['img_1']; ?>" class="img-fluid" alt="" style="width: 100%;height: 300px;">
               <div class="portfolio-info">
                 <h4><?php echo $rs['title']; ?></h4>
-                <p><strong>Quantity :</strong> <?php echo $rs['quantity']; ?> <?php echo $rs['quantity_type']; ?></p>
+                <p><strong>Quantity </strong> <?php echo $rs['quantity']; ?> <?php echo $rs['quantity_type']; ?></p>
                 <div class="portfolio-links">
                   <a href="displaysalesdetailed.php?productid=<?php echo $rs[0]; ?>" title="More Details" class="btn btn-info"><i class="bx bx-link"></i> Click For More Details</a>
                 </div>

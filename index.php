@@ -111,7 +111,7 @@ $sql = "select * from selling_product";
 $qsql = mysqli_query($con,$sql);
 echo mysqli_num_rows($qsql);
 			?></span>
-            <p>Agricultural Market</p>
+            <p>Farmers Market</p>
           </div>
 
           <div class="col-lg-2 col-4 text-center">
