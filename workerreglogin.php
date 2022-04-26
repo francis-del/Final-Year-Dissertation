@@ -24,7 +24,7 @@ if(isset($_SESSION['adminid']))
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Farm Worker Access Page</h2>
+          <h2>Worker Access Page</h2>
           <ol>
             <li><a href="index.php">Home</a></li>
           </ol>
@@ -51,7 +51,7 @@ if(isset($_SESSION['adminid']))
               <div class="col-md-6 d-flex align-items-stretch">
                 <div class="icon-box" data-aos="zoom-in" data-aos-delay="100" style="width: 100%;">
                   <div class="icon"><i class="bx bx-lock"></i></div>
-                  <h4><a href="workerloginpanel.php">Are You An Existing Worker</a></h4>
+                  <h4><a href="workerloginpanel.php">Existing Worker</a></h4>
 				        
 				  <button type="button" class="btn btn-info btn-lg btn-block" onclick="window.location='workerloginpanel.php'">Sign In  & Get Things Started</button>
                 </div>

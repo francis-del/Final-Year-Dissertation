@@ -85,7 +85,7 @@ if(isset($_GET['editid']))
 <div class="form-row">
 
 	<div class="col-md-12 form-group">
-	Category <font color="#FF0000">*</font>
+	Category <font color="#3E5C76">*</font>
 	  <select name="category" id="category" onchange="showproduce(this.value)" autofocus class="form-control">
                                    <option value="">Select</option>
                                   <?php

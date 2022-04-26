@@ -102,12 +102,12 @@ if(isset($_GET['editid']))
 <input type="hidden" name="randnumber" value="<?php echo $randnumber; ?>" >
 <div class="form-row">
 	<div class="col-md-12 form-group">
-	Category <font color="#FF0000">*</font>
+	Category <font color="#472D30">*</font>
 	  <input type="text" name="category" id="category" value="<?php echo $rsedit['category']; ?>" class="form-control">
 	</div>	
 	
 	<div class="col-md-12 form-group">
-	Image <font color="#FF0000">*</font>
+	Image <font color="#472D30">*</font>
 	  <input type="file" name="imge" id="imge" class="form-control">
 <?php
 if(isset($_GET['editid']))
@@ -136,12 +136,12 @@ else
 	</div>	
 	
 	<div class="col-md-12 form-group">
-	Description <font color="#FF0000">*</font>
+	Description <font color="#472D30">*</font>
 	  <textarea  name="description" id="description" class="form-control" ><?php echo $rsedit['description']; ?></textarea>
 	</div>	
 	
 	<div class="col-md-12 form-group">
-	Status <font color="#FF0000">*</font>
+	Status <font color="#472D30">*</font>
 	  <select name="status" id="status" class="form-control">
 			<option value="">Select Status</option>
 		  <?php

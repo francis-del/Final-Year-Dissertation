@@ -43,7 +43,7 @@ if(!isset($_GET['workschedule']))
 							<table class="table table-striped table-bordered" style="width:100%" class="datatable">
 							  <tbody>
 							    <tr>
-							      <th width="236" height="34" align="right"><strong>Enter Your Name</strong></th>
+							      <th width="236" height="34" align="right"><strong>Enter Name</strong></th>
 							      <td ><?php echo $rsdisp['name']; ?></td>
 						        </tr>
 							    <tr>
@@ -91,7 +91,7 @@ if(!isset($_GET['workschedule']))
 						        </tr>
 							    <tr>
 							      <th height="33" align="left"><strong>Expected Income Pay</strong></th>
-							      <td><?php echo $rupeesymbol; ?>&nbsp;<?php echo $rsdisp['expected_salary']; ?>
+							      <td><?php echo $gbpsymbol; ?>&nbsp;<?php echo $rsdisp['expected_salary']; ?>
 								</td>
 						        </tr>
 						      </table>

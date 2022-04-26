@@ -71,7 +71,7 @@ $_SESSION['randnumber'] = $randnumber;
               <div class="col-md-6 d-flex align-items-stretch">
                 <div class="icon-box" data-aos="zoom-in" data-aos-delay="100" style="width: 100%;text-align: left;">
 <form method="post" action="" name="frmworklogin" onSubmit="return validateworklogin()">
-                  <h4>Login Interface</h4>
+                  <h4>Login</h4>
 <input type="hidden" name="randnumber" value="<?php echo $randnumber; ?>" >
 
 <div class="form-group">
@@ -93,7 +93,7 @@ $_SESSION['randnumber'] = $randnumber;
 
               <div class="col-md-3 d-flex align-items-stretch mt-4 mt-lg-0">
                 <div class="icon-box" data-aos="zoom-in" data-aos-delay="200" style="width: 100%;">
-                  <h4><a href="worker.php">New User: Register First</a></h4>
+                  <h4><a href="worker.php">New Worker? Register</a></h4>
                   <div class="icon"><i class="bx bx-file"></i></div>
 				  <button type="button" class="btn btn-warning btn-lg btn-block"  onclick="window.location='worker.php'" >Sign Up (It's Free)</button>
                 </div>

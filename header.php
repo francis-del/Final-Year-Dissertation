@@ -270,7 +270,7 @@ else if(isset($_SESSION['adminid']))
 	  </ul>
 	</li>
 		
-	<li class="drop-down"><a href="#">Farmer's Workshop</a>
+	<li class="drop-down"><a href="#">Farmer's ToolShop</a>
 	  <ul>
 		<li><a href="category.php?cattype=SellingProduct">Add Selling Product Category</a></li>     
 		<li><a href="viewcategory.php?cattype=SellingProduct">View Selling Product Category</a></li>  
@@ -312,7 +312,7 @@ if(mysqli_num_rows($qsqlproduct_purchase_record) >= 1)
 else
 {
 ?>			
-<li class="get-started"><a href="#">Cart (<?php echo mysqli_num_rows($qsqlproduct_purchase_record); ?>)</a></li>
+<li class="get-started"><a href="#">Product Cart (<?php echo mysqli_num_rows($qsqlproduct_purchase_record); ?>)</a></li>
 <?php
 }
 ?>

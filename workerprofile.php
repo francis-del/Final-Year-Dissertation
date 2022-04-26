@@ -62,7 +62,7 @@ if(isset($_SESSION['workerid']))
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
             <div class="info mt-4">
 			
-		<center><h4>Keep Your Profile Updated Here..</h4></center><hr>
+		<center><h4>Update Your Profile Here..</h4></center><hr>
 
 <form method="post" action="" enctype="multipart/form-data"  name="frmworkreg" onSubmit="return validateworkreg()">
 <input type="hidden" name="randnumber" value="<?php echo $randnumber; ?>" >

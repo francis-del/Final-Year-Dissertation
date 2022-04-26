@@ -181,7 +181,7 @@ $buyingproduct = $_POST['buyingproduct'];
 	</div>	
 	
 	<div class="col-md-6 form-group">
-		State<font color="#FF0000">*</font>
+		State<font color="#472D30">*</font>
 	  <span id='loadstate'><select name="cststate" id="cststate" onChange="loadcity(this.value)" class="form-control">
 <option value="">Select</option>
 <?php

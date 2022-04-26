@@ -6,7 +6,7 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>FARMEX</h3>
+            <h3>FARMEX....... THE FUTURE!!!!!</h3>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
@@ -14,8 +14,8 @@
             <ul>
               <!-- <li><i class="bx bx-chevron-right"></i> <a href="displayarticles.php?articletype=Blog">Blog</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="displayarticles.php?articletype=News">News</a></li> -->
-              <li><i class="bx bx-chevron-right"></i> <a href="displayproducts.php">Farmer's Workshop</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="displaysales.php">Market for Farmers's</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="displayproducts.php">Workshop</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="displaysales.php">Market</a></li>
             </ul>
           </div>
 
