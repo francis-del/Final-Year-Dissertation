@@ -22,7 +22,7 @@ However, this new FMS was developed in purpose to enable farmers market their pr
 final year project
 
 
-
+to run this code, you must have Xampp installed on your machine. 
 
 ![home page 1](https://github.coventry.ac.uk/storage/user/3703/files/fd058d57-62c8-4168-b38e-5168966a4728)
 
