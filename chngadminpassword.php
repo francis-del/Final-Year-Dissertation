@@ -48,14 +48,14 @@ $_SESSION['randnumber'] = $randnumber;
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
             <div class="info mt-4">
 			
-		<center><h4>Enter Old password, New Password, Confirm password to change password...</h4></center><hr>
+		<center><h4>Enter Old password, New Password, Confirm password to change password..</h4></center><hr>
 
 <form method="post" action="" name="frmcstchngpasswrd" onSubmit="return validatecstchngpasswrd()">
 <input type="hidden" name="randnumber" value="<?php echo $randnumber; ?>" >
 				  
 <div class="form-row">
 	<div class="col-md-6 form-group">
-	Old password <font color="#FF0000">*</font>
+	Old password <font color="#472D30">*</font>
 	  <input type="password" name="oldpassword" id="oldpassword" class="form-control" >
 	</div>	
 	
@@ -63,12 +63,12 @@ $_SESSION['randnumber'] = $randnumber;
 	</div>	
 	
 	<div class="col-md-6 form-group">
-	New Password <font color="#FF0000">*</font>
+	New Password <font color="#472D30">*</font>
 	  <input type="password" name="newpassword" id="newpassword" class="form-control" >
 	</div>	
 	
 	<div class="col-md-6 form-group">
-		Confirm Password <font color="#FF0000">*</font>
+		Confirm Password <font color="#472D30">*</font>
 		<input type="password" name="password3" id="password3" class="form-control" >
 	</div>	
 

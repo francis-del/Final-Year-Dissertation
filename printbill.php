@@ -25,7 +25,7 @@ $rs3 = mysqli_fetch_array($qsql3);
 		<br>
 		<br>
 		<br>
-          <h3>Bill Receipt</h3>
+          <h3>Product Receipt</h3>
         </div>
 
       </div>

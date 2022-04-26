@@ -49,7 +49,7 @@ if(isset($_POST['submit']))
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>CONTACT US...</h2>
+          <h2>CONTACT...</h2>
           <ol>
             <li>Always Willing to help..</li>
           </ol>
@@ -66,7 +66,7 @@ if(isset($_POST['submit']))
 
         <div class="text-center" data-aos="zoom-in">
           <h3>We Would Be Delighted To Hear From You!!!</h3>
-          <p> Questions or requests about our services can be sent via the contact form on the right. <br> We will reply within 24 hours.</p>
+          <p> Questions or requests about this services can be sent via the contact form on the right. <br> response is within 24 hours.</p>
     
         <a href="#" class="twitter cta-btn "><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook cta-btn"><i class="bx bxl-facebook"></i></a>
