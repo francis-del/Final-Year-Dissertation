@@ -34,7 +34,7 @@ if(isset($_GET['category_id']))
 else
 {
 ?>
-<li data-filter="*" class="filter-active">Market Items</li>
+<li data-filter="*" class="filter-active">Market Products</li>
 <?php
 }
 ?>

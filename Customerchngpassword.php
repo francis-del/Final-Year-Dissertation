@@ -45,7 +45,7 @@ $_SESSION['randnumber'] = $randnumber;
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
             <div class="info mt-4">
 			
-		<center><h4>Enter Old password, New Password, Confirm password to change password...</h4></center><hr>
+		<center><h4>Enter Old password, New Password, Confirm password to change password.</h4></center><hr>
 
 <form method="post" action="" name="frmcstchngpasswrd" onSubmit="return validatecstchngpasswrd()">
 <input type="hidden" name="randnumber" value="<?php echo $randnumber; ?>" >

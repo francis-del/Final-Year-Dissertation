@@ -38,11 +38,11 @@ if(isset($_SESSION['customerid']))
 	<table class="table table-striped table-bordered" style="width:100%" class="datatable">
 	  <tbody>
 		<tr>
-		  <th width="200" height="34" align="right"><strong>Enter Your Name</strong></th>
+		  <th width="200" height="34" align="right"><strong>Customer Name</strong></th>
 		  <td ><?php echo $rsdisp['customer_name']; ?></td>
 		</tr>
 		<tr>
-		  <th height="48" align="right"><strong>Enter Your Address</strong></th>
+		  <th height="48" align="right"><strong>Customer Address</strong></th>
 		 
 		 <?php
 		
@@ -74,7 +74,7 @@ if(isset($_SESSION['customerid']))
 		  <td><?php echo $rsdisp['contact_no']; ?></td>
 		</tr>
 		<tr>
-		  <th height="39" align="left"><strong>Email ID:</strong></th>
+		  <th height="39" align="left"><strong>Email ID</strong></th>
 		  <td><?php echo $rsdisp['email_id']; ?></td>
 		</tr>
 		<tr>

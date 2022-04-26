@@ -1,4 +1,4 @@
-##### code idea from: www.github.com/gipsbrian/afms_Afri_Farm_Management_System/tree/master/fam2
+<!-- code idea from: www.github.com/gipsbrian/afms_Afri_Farm_Management_System/tree/master/fam2 -->
 
 
 <?php
@@ -105,7 +105,7 @@ $sql = "select * from product";
 $qsql = mysqli_query($con,$sql);
 echo mysqli_num_rows($qsql);
 			?></span>
-            <p>ToolKit Shop</p>
+            <p>ToolKit</p>
           </div>
 
           <div class="col-lg-2 col-4 text-center">
@@ -114,7 +114,7 @@ $sql = "select * from selling_product";
 $qsql = mysqli_query($con,$sql);
 echo mysqli_num_rows($qsql);
 			?></span>
-            <p>Farmers Market</p>
+            <p>Market</p>
           </div>
 
           <div class="col-lg-2 col-4 text-center">
@@ -123,7 +123,7 @@ $sql = "select * from worker";
 $qsql = mysqli_query($con,$sql);
 echo mysqli_num_rows($qsql);
 			?></span>
-            <p>Farm Workers</p>
+            <p>Workers</p>
           </div>
 
 
@@ -162,7 +162,7 @@ echo mysqli_num_rows($qsql);
                   <div class="icon-box mt-4 mt-xl-0">
                     <h4>Worker</h4>
                     <i class="bx bx-walk"></i>
-                    <p>Agriculture job openings and opportunities can be found here. Jobs as a Farm Worker are accessible here...<br> <b>Login / Register as Worker</b></p>
+                    <p>Agriculture job opportunities can be found here. Jobs as a Farm Worker are accessible here...<br> <b>Login / Register as Worker</b></p>
 					<div class="text-center"><button type="button" class="btn btn-info" onclick="window.location='workerreglogin.php'">Click Here</button></div>
                   </div>
                 </div>

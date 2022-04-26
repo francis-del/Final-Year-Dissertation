@@ -45,7 +45,7 @@ $_SESSION['randnumber'] = $randnumber;
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Farm Admin Login Page</h2>
+          <h2>Admin Login Page</h2>
           <ol>
             <li><a href="index.php">Home</a></li>
           </ol>
@@ -64,7 +64,7 @@ $_SESSION['randnumber'] = $randnumber;
 			
               <div class="col-md-4 d-flex align-items-stretch mt-4 mt-lg-0">
                 <div class="icon-box" data-aos="zoom-in" data-aos-delay="200" style="width: 100%;">
-                  <h4>Admin Login</h4>
+                  <h4>Admin</h4>
                   <img src="images/women.png" style="width: 100%;">
                 </div>
               </div>

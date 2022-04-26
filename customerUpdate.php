@@ -54,7 +54,7 @@ if(isset($_SESSION['customerid']))
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
             <div class="info mt-4">
 			
-		<center><h4>Profile Update Here</h4></center>
+		<center><h4>Update Profile Here</h4></center>
 
 <form method="post" action="" name="frmcstupdate" onsubmit="return validatecstupdate()">
 <input type="hidden" name="randnumber" value="<?php echo $randnumber; ?>" >

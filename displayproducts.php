@@ -11,7 +11,7 @@ include("header.php");
 			<br>
 			<br>
 			<br>
-          <h3>Farmer's Workshop</h3>
+          <h3>Workshop</h3>
         </div>
 
       </div>
@@ -35,7 +35,7 @@ if(isset($_GET['category_id']))
 else
 {
 ?>
-<li data-filter="*" class="filter-active">All Toolkit Available</li>
+<li data-filter="*" class="filter-active">Toolkits Available</li>
 <?php
 }
 ?>

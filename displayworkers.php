@@ -25,7 +25,7 @@ include("header.php");
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-<li data-filter="*" class="filter-active">Jobs in Agriculture industry leading farm jobs near you. </li>
+<li data-filter="*" class="filter-active">Jobs in Agriculture farms leading farm jobs near you. </li>
             </ul>
           </div>
         </div>

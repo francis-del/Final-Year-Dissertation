@@ -20,7 +20,7 @@ $rscategory = mysqli_fetch_array($qsqlcategory);
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Farmers Kit Product Details</h2>
+          <h2>Farmers Toolkit Product Detail</h2>
           <ol>
             <li><a href="index.php">Home</a></li>
           </ol>

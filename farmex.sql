@@ -232,7 +232,7 @@ CREATE TABLE `produce` (
   `produce` varchar(25) NOT NULL,
   `description` text NOT NULL,
   `img` varchar(100) NOT NULL,
-  `status` varchar(10) NOT NULL
+  `status` varchar(10) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

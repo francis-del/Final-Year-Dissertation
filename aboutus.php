@@ -5,8 +5,8 @@ include("header.php");
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
-      <h1>FARMEX - Creating an Online Marketing system for Farmers......</h1>
-      <h2>Farm Management System is to help farmers sell their produce to wider market........</h2>
+      <h1>FARMEX - Creating an Online Marketing system for Farmers.</h1>
+      <h2>Farm Management System is to help farmers sell their produce to wider market.</h2>
       <a href="aboutus.php" class="btn-get-started scrollto">Get Things Started</a>
     </div>
   </section><!-- End Hero -->
@@ -57,9 +57,9 @@ include("header.php");
 <img src="img/pja1.jpg" style="width: 100%;">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left" data-aos-delay="200">
-            <p class="font-italic"><b>objectives :</b> Assisting farmers, merchants, and farm workers with technology and services that will allow them to grow their businesses and reach a wider market. In order to make current farming practises better and to educate the public on current agricultural challenges and how to solve it.
+            <p class="font-italic"><b> Key objective</b> Assisting farmers, merchants, and farm workers with technology and services that will allow them to grow their businesses and reach a wider market. In order to make current farming practises better and to educate the public on current agricultural challenges and how to solve it.
             </p>
-            <p class="font-italic"><b>Vision :</b> To assist farmers and agricultural workers in increasing their quality of life through the use of technology, ultimately enhancing the World Agricultural Sector.
+            <p class="font-italic"><b>Motivation:</b> To assist farmers and agricultural workers in increasing their quality of life through the use of technology, ultimately enhancing the World Agricultural Sector.
             </p>
             <ul>
               <li><i class="ri-check-double-line"></i> ‘Farmex' is a model farmer management website application..</li>
@@ -102,7 +102,7 @@ $sql = "select * from product";
 $qsql = mysqli_query($con,$sql);
 echo mysqli_num_rows($qsql);
 			?></span>
-            <p>Farmer Toolkit</p>
+            <p>Toolkit</p>
           </div>
 
           <div class="col-lg-2 col-4 text-center">
@@ -111,7 +111,7 @@ $sql = "select * from selling_product";
 $qsql = mysqli_query($con,$sql);
 echo mysqli_num_rows($qsql);
 			?></span>
-            <p>The Farmers' Market</p>
+            <p>Market</p>
           </div>
 
           <div class="col-lg-2 col-4 text-center">
@@ -120,7 +120,7 @@ $sql = "select * from worker";
 $qsql = mysqli_query($con,$sql);
 echo mysqli_num_rows($qsql);
 			?></span>
-            <p>Farm Workers</p>
+            <p>Workers</p>
           </div>
 
 

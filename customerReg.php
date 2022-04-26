@@ -94,7 +94,7 @@ if(isset($_GET['editid']))
                 <div class="icon-box" data-aos="zoom-in" data-aos-delay="100" style="width: 100%;text-align: left;">
 <form method="post" action="" name="frmcstreg" onSubmit="return validatecstreg()">
 <input type="hidden" name="randnumber" value="<?php echo $randnumber; ?>" >
-                  <h4>Registration Page</h4>
+                  <h4>Registration</h4>
 				  
 <div class="form-row">
 	<div class="col-md-6 form-group">
