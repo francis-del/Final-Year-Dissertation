@@ -38,11 +38,11 @@ if(isset($_SESSION['sellerid']))
 	<table class="table table-striped table-bordered" style="width:100%" class="datatable">
 	  <tbody>
 		<tr>
-							      <th width="236" height="34" align="right"><strong>Your Name:</strong></th>
+							      <th width="236" height="34" align="right"><strong>Your Name</strong></th>
 							      <td width="874"><?php echo $rsdisp['seller_name']; ?></td>
 						        </tr>
 							    <tr>
-							      <th height="48" align="right"><strong>Your Address:</strong></th>
+							      <th height="48" align="right"><strong>Your Address</strong></th>
                                  <?php
 								  $sql1 = "SELECT * FROM country WHERE country_id='$rsdisp[country_id]'";
 								  $qsql1 = mysqli_query($con,$sql1);
@@ -58,25 +58,25 @@ if(isset($_SESSION['sellerid']))
 								  <td>
 								 <?php echo $rsdisp['seller_address']; ?><br />
                                  <?php echo $rs3['city']; ?><br />
-                                 <?php echo $rsdisp['pincode']; ?><br />
+                                 <?php echo $rsdisp['postcode']; ?><br />
                                  <?php echo $rs2['state']; ?> <br />
                                  <?php echo $rs1['country']; ?><br />
                                  </td>
 						        </tr>  
 							    <tr>
-							      <th height="39" align="left"><strong>Contact Number:</strong></th>
+							      <th height="39" align="left"><strong>Contact Number</strong></th>
 							      <td><?php echo $rsdisp['contact_number']; ?></td>
 						        </tr>
 							    <tr>
-							      <th height="35" align="left"><strong>Mobile Number:</strong></th>
+							      <th height="35" align="left"><strong>Mobile Number</strong></th>
 							      <td><?php echo $rsdisp['mobile_no']; ?></td>
 						        </tr>
 							    <tr>
-							      <th height="39" align="left"><strong>Email ID:</strong></th>
+							      <th height="39" align="left"><strong>Email ID</strong></th>
 							      <td><?php echo $rsdisp['email_id']; ?></td>
 						        </tr>
 							    <tr>
-							      <th height="33" align="left"><strong>Bank Details:</strong></th>
+							      <th height="33" align="left"><strong>Bank Details</strong></th>
 							      <td>
 								  Account No.: <?php echo $rsdisp['bank_acno']; ?><br />
                                   Bank Sort Code: <?php echo $rsdisp['bank_sortcode']; ?><br />

@@ -25,7 +25,7 @@ include("header.php");
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-<li data-filter="*" class="filter-active">Jobs in Agriculture hosts industry leading farm jobs near you. </li>
+<li data-filter="*" class="filter-active">Jobs in Agriculture industry leading farm jobs near you. </li>
             </ul>
           </div>
         </div>
@@ -41,7 +41,7 @@ include("header.php");
             <div class="row">
               <div class="col-lg-3">
                 <div class="info">
-                  <h6>Select country:</h6>
+                  <h6>Select country</h6>
 <select name="country" id="country" onChange="loadstate(this.value)" autofocus class="search_categories form-control">
         <option value="">Select Country</option>
 		<?php
@@ -132,7 +132,7 @@ else
 			<p><strong>Farm Work Profile</strong> <?php echo $rs['work_profile']; ?></p>
 			<hr>
 			<div >
-			  <a href="workerdetailed.php?workerid=<?php echo $rs['worker_id']; ?>" class="btn btn-info">View More</a>
+			  <a href="workerdetailed.php?workerid=<?php echo $rs['worker_id']; ?>" class="btn btn-info">More</a>
 			</div>
 		  </div>
 		</div>

@@ -62,7 +62,7 @@ if(isset($_GET['prodid']))
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
             <div class="info mt-4 ">
 			
-		<center><h4>Update your Cart before payment...</h4></center><hr>
+		<center><h4>Update your Cart before payment</h4></center><hr>
 
 <?php
                 $i=1;

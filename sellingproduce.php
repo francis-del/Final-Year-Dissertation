@@ -175,7 +175,7 @@ if(isset($_GET['editid']))
 	
 	
 	<div class="col-md-12 form-group">
-			Variety <font color="#FF0000">*</font>
+			Variety <font color="#333D29">*</font>
 				<div id="txtHint1"><select name="variety" id="variety"  class="form-control">
 				 <option value="">Select</option>
 				  <?php

@@ -16,7 +16,7 @@ if(!isset($_SESSION['adminid']))
 
         <div class="text-center" data-aos="zoom-in">
 		<br><br>
-          <h3>Purchased Products Bill Report</h3>
+          <h3>Products Bill Report</h3>
         </div>
 
       </div>

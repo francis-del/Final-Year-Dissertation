@@ -73,7 +73,7 @@ if(isset($_GET['deleteid']))
 	  <td>&nbsp;$rs1[title]</td>
 	  <td>&nbsp;$rs2[customer_name]</td>
 	  <td>&nbsp;$rs[purchase_order_date]</td>
-	  <td>&nbsp;$rupeesymbol $rs[purchase_amt]</td>
+	  <td>&nbsp;$gbpsymbol $rs[purchase_amt]</td>
 	  <td>&nbsp;$rs[quantity] $rs1[quantity_type]	</td>
 	  <td>&nbsp;$rs[status]</td>
 	</tr>";

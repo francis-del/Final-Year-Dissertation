@@ -205,7 +205,7 @@ if($smsstatus == "Enabled")
 
 <hr>
 
-<h4>Send A Purchase Request</h4>
+<h4>Send Purchase Request</h4>
 
   <?php
 				if(isset($_POST['submit']))

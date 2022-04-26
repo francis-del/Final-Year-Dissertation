@@ -72,7 +72,7 @@ echo mysqli_error($con);
 			  <td>&nbsp;$rsbill[payment_type]</td>
 			  <td>&nbsp;" . date("d-m-Y",strtotime($rsbill['paid_date'])) ."</td>
 			  <td>&nbsp;$rsbill[15] $rsproduct[quantity_type]</td>
-			  <td>&nbsp;$rupeesymbol $rsbill[paid_amt]</td>
+			  <td>&nbsp;$gbpsymbol $rsbill[paid_amt]</td>
 			  <td><a href='salesprintbill.php?purchase_order_bill_id=$rsbill[0]' class='btn btn-primary' target='_blank'>Print</a></td>
 			</tr>";
 			  }

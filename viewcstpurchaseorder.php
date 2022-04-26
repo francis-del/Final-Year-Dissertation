@@ -85,7 +85,7 @@ $date2 = new DateTime($dexdate);
 									  <td>&nbsp;$rs2[customer_name]</td>
 									  <td>&nbsp;" . date("d-m-Y",strtotime($rs['purchase_order_date'])) . "</td>
 									  <td>". date("d-m-Y",strtotime($dexdate)) ."</td>
-									  <td>&nbsp;$rupeesymbol $rs[purchase_amt]</td>
+									  <td>&nbsp;$gbpsymbol $rs[purchase_amt]</td>
 									  <td>&nbsp;$rs[quantity] $rs1[quantity_type]</td>
 									  <td>&nbsp;";
 									  if($rs['status'] == "Pending")

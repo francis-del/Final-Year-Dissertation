@@ -205,19 +205,19 @@ include("footer.php");
 		}
 		else if(document.frmprodpurchasebill.country.value == "")
 		{
-			alert("Select your country..");
+			alert("Select country..");
 			document.frmprodpurchasebill.country.focus();
 			return false;
 		}	
 		else if(document.frmprodpurchasebill.state.value == "")
 		{
-			alert("Select your state..");
+			alert("Select state..");
 			document.frmprodpurchasebill.state.focus();
 			return false;
 		}	
 		else if(document.frmprodpurchasebill.city.value == "")
 		{
-			alert("Select your city..");
+			alert("Select city..");
 			document.frmprodpurchasebill.city.focus();
 			return false;
 		}

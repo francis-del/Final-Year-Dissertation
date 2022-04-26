@@ -122,7 +122,7 @@ $buyingproduct = $_POST['buyingproduct'];
 								<tfoot>
     <tr>
       <th colspan="4" style="text-align: right;"><strong>Purchase Total</strong></th>
-      <th>&nbsp;<?php echo £; ?>  <?php echo $tot; ?></th>
+      <th>&nbsp;<?php echo $gbpsymbol; ?>  <?php echo $tot; ?></th>
     </tr>								
 								</tfoot>
 						  </table>
@@ -334,7 +334,7 @@ function funpaymenttype(paytype)
 	}
 	else if(document.frmcstdetail.cstcountry.value == "")
 	{
-		alert("Kindly select a country..");
+		alert("please select a country..");
 		document.frmcstdetail.cstcountry.focus();
 		return false;
 	}

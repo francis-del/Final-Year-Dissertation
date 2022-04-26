@@ -71,7 +71,7 @@ if($_SESSION['customerid'] != "" && $_SESSION['sellerid'] != "")
 				  			<td>&nbsp;$rs[product_purchase_bill_id]</td>
 							<td>&nbsp;$rs[customer_address]</td>
 				  			<td>&nbsp;$rs[purchase_date]</td>
-				  			<td>&nbsp;$rupeesymbol " . $rssum[0]  . "</td>
+				  			<td>&nbsp;$gbpsymbol " . $rssum[0]  . "</td>
 				  			<td>&nbsp;$rs[status]</td>
 				  			<td> <a href='printbill.php?billid=$rs[0]' class='btn btn-info'>View Bill</a></td>
 						</tr> ";

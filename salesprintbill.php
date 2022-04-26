@@ -140,7 +140,7 @@ POST Code: <?php echo $rsseller['postcode']; ?><br>
       <th height="33" scope="row">&nbsp;</th>
       <th>&nbsp;</th>
       <th><strong>Grand total</strong></th>
-      <th>&nbsp; <?php echo £; ?> <?php echo $rspurchase_order['purchase_amt']; ?></th>
+      <th>&nbsp; <?php echo $gbpsymbol; ?> <?php echo $rspurchase_order['purchase_amt']; ?></th>
 
     </tr>
   </tbody>

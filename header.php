@@ -2,7 +2,7 @@
 if(!isset($_SESSION)) { session_start(); }
 error_reporting(E_ALL & ~E_NOTICE  &  ~E_STRICT  &  ~E_WARNING);
 $dt = date("Y-m-d");
-$rupeesymbol= "₹";
+$gbpsymbol= "£";
 include("dbconnection.php");
 ?> 
 <!DOCTYPE html>
@@ -115,7 +115,7 @@ echo "<li><a href='displaysales.php?category_id=$rscategoryfm[category_id]&categ
               </ul>
             </li>
 			
-            <li><a href="displayworkers.php">Hire Farm Workers</a></li>
+            <li><a href="displayworkers.php">Hire Workers</a></li>
 
 <?php
 if(isset($_SESSION['customerid']))
@@ -130,7 +130,7 @@ if(isset($_SESSION['customerid']))
   <ul>
 	<li><a href="customerpanel.php">Customer Panel</a></li>
 	<li><a href="viewcstpurchasereport.php">Farmer's Workshop - Purchase Report</a></li>					
-    <li><a href="viewpurchaserequest.php">Market for Farmer's - View Purchase request</a></li>
+    <li><a href="viewpurchaserequest.php">Market - View Purchase request</a></li>
     <li><a href="viewcstpurchaseorder.php">Market for farm Produce - View Purchase from farmer</a></li>
     <li><a href="viewpurchasereport.php">Farm Market - View Bill Report</a></li>
 	

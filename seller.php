@@ -67,7 +67,7 @@ if(isset($_GET['editid']))
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Farmer Registration Page</h2>
+          <h2>Farmer Registration</h2>
           <ol>
             <li><a href="index.php">Home</a></li>
           </ol>
@@ -243,7 +243,7 @@ include("footer.php");
 		  }
 		  else if(document.frmsellreg.country.value == "")
 		  {
-			alert("Kindly select the country..");
+			alert("Select the country..");
 			document.frmsellreg.country.focus();
 			return false;
 		  }
@@ -255,7 +255,7 @@ include("footer.php");
 		  }
 		    else if(document.frmsellreg.city.value == "")
 		  {
-			alert("Kindly select the city..");
+			alert("Select the city..");
 			document.frmsellreg.city.focus();
 			return false;
 		  }
@@ -315,7 +315,7 @@ include("footer.php");
 	}	
 		   else if(document.frmsellreg.password.value == "")
 		  {
-			alert("Kindly enter the password..");
+			alert("Enter the password..");
 			document.frmsellreg.password.focus();
 			return false;
 		  }
